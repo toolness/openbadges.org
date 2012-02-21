@@ -1,5 +1,6 @@
-This is the content for the website at [openbadges.org][].
+This is the content for the website at [openbadges.toolness.org][]. It will eventually replace the content on [openbadges.org][].
 
+  [openbadges.toolness.org]: http://openbadges.toolness.org
   [openbadges.org]: http://openbadges.org
 
 ## Prerequisites
