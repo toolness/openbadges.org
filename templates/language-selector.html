@@ -1,0 +1,22 @@
+{# Note that this template is both embedded into the footer and fetched by
+ # the site's locale redirector pages to determine what localizations are
+ # available for client-side content negotiation.
+ #}
+<form autocomplete="off">
+  <select class="language-selector">
+    {% for locale in locales %}
+      {% if locale is sameas current_locale %}
+      <option value="{{ locale }}" selected>{{ locale.display_name }}</option>
+      {% else %}
+      <option value="{{ locale }}">{{ locale.display_name }}</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+  <noscript>
+    <ul class="noscript-language-selector">
+      {% for locale in locales %}
+        <li><a href="/{{ locale }}/">{{ locale.display_name }}</a></li>
+      {% endfor %}
+    </ul>
+  </noscript>
+</form>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/en-US{{ PATH_INFO }}">
+    </noscript>
+    <title>Open Badges</title>
+  </head>
+  <body>
+    <noscript>
+      Please click <a href="/en-US{{ PATH_INFO }}">here</a> if you are not 
+      redirected automatically.
+    </noscript>
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="/scripts/localize.js"></script>
+    <script>
+    $(window).ready(function() {
+      jQuery.localization.activateBestLocale("{{ PATH_INFO }}");
+    });
+    </script>
+  </body>
+</html>

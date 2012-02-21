@@ -1,0 +1,4 @@
+locale
+dist
+*.pyc
+settings_local.py
