@@ -205,16 +205,18 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 cols    1     2      3      4      5      6      7      8      9      10
 px      68    160    252    344    436    528    620    712    804    896    */
 
-html {
+body {
+  background: rgb(245,241,232) url('../img/mozorg-gradient.png') repeat-x top center;
+}
+
+#tabborder {
   border-top: 2px solid white;
 }
 
-
-body {
+#outer {
   width: 896px;
   margin: 0px auto;
   padding: 72px 48px 84px;
-  background: rgb(245,241,232) url('../img/mozorg-gradient.png') repeat-x top center;
   color: rgb(60,60,60);
   -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
@@ -233,7 +235,7 @@ box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
 
 
 #framework {position: relative;}
-#faux-tabzilla {position: absolute; top: -72px; right: 0px;}
+#tabzilla {position: absolute; top: -72px; right: 0px;}
 .style-example {margin-left: 252px; margin-bottom: 48px; min-width: 252px;}
 .style-example img {max-width: 100%;}
 .style-example li {list-style-type: square;}
@@ -258,7 +260,7 @@ px      68    160    252    344    436    528    620    712    */
     padding: 48px 28px 60px;
   }
   
-  #faux-tabzilla {top: -48px;}
+  #tabzilla {top: -48px;}
   
 }
 
@@ -274,7 +276,7 @@ px      68    160    252    */
 
 @media only screen and (max-width: 767px) {
   
-  body {
+  #outer {
     width: 252px;
     padding: 48px 34px 60px;
   }
@@ -282,7 +284,7 @@ px      68    160    252    */
 .huge {font-size: 64px;}
 .large {font-size: 58px;}
 
-#faux-tabzilla {top: -48px;}
+#tabzilla {top: -48px;}
 
 #menu {line-height: 48px;}  
 #menu .menuItem {width: 252px; margin: 0px 24px; padding: 0px;}
@@ -306,11 +308,11 @@ px      68    160    252    344    436    */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   
-  body {
+  #outer {
     width: 436px;
     padding: 36px 22px 48px;
   }
   
-  #faux-tabzilla {top: -36px;}
+  #tabzilla {top: -36px;}
   
 }
