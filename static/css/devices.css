@@ -1,0 +1,213 @@
+/*
+Default template CSS - if you change anything here then updating will be a bit more tricky than you might want
+*/
+@font-face {
+    font-family: MetaWebPro-Black;
+    src: url(../fonts/MetaWebPro-Black.woff) format('woff');
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:link, 
+a:visited,
+a:focus,
+a:hover,
+a:active {
+    color: #EF4619;
+    text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+    text-decoration: underline;
+}
+aside {
+    position: relative;
+}
+.box {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.busta {
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+.columns {
+    overflow: hidden;
+    padding-left: 0;
+    margin-top: 0;
+    clear: both;
+}
+.col {
+    list-style-type: none;
+    overflow: hidden;
+}
+/**= Sections */
+#header-and-content {
+  background: url("../img/mozorg-gradient.png") repeat-x scroll center top #F5F1E8;
+  color: #3C3C3C;
+}
+
+/* Masthead */
+.masthead {
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid #FFF;
+}
+.masthead ul {
+    overflow: hidden;
+    margin: 0;
+    padding-left: 0;
+}
+.masthead ul li {
+    float: left;
+    border-left: 1px solid #686868;
+}
+.masthead ul li:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+.masthead ul a {
+    padding: 1em;
+    display: block;
+    font-size: 12px;
+}
+.masthead ul li:first-child a {
+    padding-left: 0;
+}
+.masthead ul a:link,
+.masthead ul a:visited,
+.masthead ul a:focus,
+.masthead ul a:hover,
+.masthead ul a:active {
+    color: #333;
+}
+/* External links */
+.external {
+    background: url("../img/css/bg_external.png") repeat-x scroll 0 0 #fff;
+    font-family: Georgia;
+}
+.external h2 {
+    padding-top: 40px;
+    font-family: "MetaWebPro-Black";
+    background: transparent url(../img/css/icons.png) no-repeat top left;
+    color: #2e2e2d;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: normal;
+}
+.external .tweet h2 {
+    background-position: 0 -140px;
+}
+.external .mozilla h2 {
+    background-position: 0 -290px;
+}
+.external .learn h2 {
+    background-position: 0 -440px;
+}
+.external p {
+    font-size: 14px;
+    color: #454545;
+}
+.external ul {
+    padding-left: 0;
+}
+.external li {
+    list-style-type: none;
+    border-top: 1px solid #D8DADC;
+    padding: 0.5em 0;
+    font-size: 14px;
+}
+.external li:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+/* Partners */
+.partners {
+    background: url("../img/css/bg_partners.png") repeat-x scroll 0 0 #ececec;
+}
+.partners h2 {
+    float: left;
+    margin: 1em 0 0; /* 1em = 18px; */
+    font-family: "MetaWebPro-Black";
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.partners ul {
+    float: left;
+    margin: 0;
+    padding-left: 0;
+
+}
+.partners li {
+    float: left;
+    margin-right: 20px;
+    list-style-type: none;
+}
+/* Main content */
+div[role=main] {
+    background: #fff;
+    margin: 0.625em 0 0 0;
+}
+
+/**= And now time for your styles */
+/* Redefine some of the defaults to our style */
+
+a:link, 
+a:visited,
+a:focus,
+a:hover,
+a:active {
+    color: #2c8de6;
+}
+
+.masthead {
+  background: none;
+}
+
+div[role=main] {
+  background: none;
+}
+
+.external {
+  background: none;
+  background-color: #323538;
+}
+
+.external h2,
+.external p {
+  color: #9c9c9c;
+}
+
+.external li {
+  border-top: 1px solid #2c8de6;
+}
+
+.partners {
+  background: none;
+  background-color: #000;
+}
+
+.partners h2 {
+  color: #87888b;
+}
+
+/* Our styles */
+
+@font-face {
+    font-family: Bebas-Neue;
+    src: url(../fonts/BebasNeue-webfont.woff) format('woff');
+}
+
+#logo {
+  font-family: "Bebas-Neue";
+  font-size: 54px;
+  color: #444;
+  text-decoration: none;
+}
+
+.masthead ul a {
+  text-transform: uppercase;
+}
