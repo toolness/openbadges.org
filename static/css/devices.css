@@ -211,3 +211,33 @@ div[role=main] {
 .masthead ul a {
   text-transform: uppercase;
 }
+
+/* Index.html styles */
+
+.panel {
+  height: 368px;
+  width: 940px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0 auto;
+  background: url("../img/gladis.png") no-repeat scroll right bottom transparent;
+  padding-right: 251px;
+  color: #656565;
+  font: italic 18px Georgia,"Times New Roman",Times,serif;
+}
+
+.panel h1 {
+  padding-top: 35px;
+  font-size: 42px;
+  text-transform: lowercase;
+}
+
+.panel h1 em {
+  font: normal 56px/42px "MetaWebPro-Black";
+  text-transform: uppercase;
+  display: block;
+}
+
+.panel p {
+  font-style: italic;
+}
