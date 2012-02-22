@@ -25,6 +25,10 @@ footer, header, nav, section, audio, video {
 }
 
 a {color: rgb(175,50,50); text-decoration: none; border-bottom: 1px dotted rgb(175,50,50);}
+#tabzilla,
+#tabzilla-panel a {
+  border-bottom: none;
+}
 
 a img {border: 0;}
 p {margin-bottom: 24px;}
