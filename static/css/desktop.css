@@ -35,3 +35,7 @@ Default template CSS - if you change anything here then updating will be a bit m
 }
 
 /**= And now time for your styles */
+
+.busta {
+  max-width: 900px;
+}
