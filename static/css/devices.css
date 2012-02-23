@@ -213,18 +213,18 @@ div[role=main] {
 }
 
 /* Index.html styles */
-
+/*
 .panel {
   height: 368px;
   width: 940px;
-/*  box-sizing: border-box;
+  box-sizing: border-box;
   -moz-box-sizing: border-box;
-*/
   margin: 0 auto;
-  /*padding-right: 251px;*/
+  padding-right: 251px;
   color: #656565;
   font: italic 18px Georgia,"Times New Roman",Times,serif;
 }
+*/
 
 #what-are {
   background: url("../img/gladis.png") no-repeat scroll right bottom transparent;
@@ -249,7 +249,7 @@ div[role=main] {
 .panel p {
   font-style: italic;
 }
-
+/*
 .coda-nav-left a, .coda-nav-right a {
     background: url("/img/slider-arrows.png") no-repeat scroll 0 0 transparent;
     float: left;
@@ -274,3 +274,4 @@ div[role=main] {
   margin: 0 auto;
   overflow: hidden;
 }
+*/

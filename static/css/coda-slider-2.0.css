@@ -4,23 +4,62 @@
 	This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
 */
 
+/* Insignificant stuff, for demo purposes */
+
+/*
+	body { padding: 20px }
+	.panel h2.title { margin-bottom: 10px }
+	noscript div { background: #ccc; border: 1px solid #900; margin: 20px 0; padding: 15px }
+*/
+
 /* Most common stuff you'll need to change */
 
-	.coda-slider-wrapper { padding: 20px 0 }
+	.coda-slider-wrapper { width: 900px; padding: 20px 0; margin: 0 auto; }
+	/*.coda-slider { background: #ebebeb }*/
 	
 	/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
 	.coda-slider-no-js .coda-slider { height: 200px; overflow: auto !important; padding-right: 20px }
 	
 	/* Change the width of the entire slider (without dynamic arrows) */
-	.coda-slider, .coda-slider .panel { width: 870px } 
+	.coda-slider, .coda-slider .panel { width: 600px } 
 	
 	/* Change margin and width of the slider (with dynamic arrows) */
 	.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { width: 600px }
 	.coda-slider-wrapper.arrows .coda-slider { margin: 0 10px }
 	
 	/* Arrow styling */
-	/*.coda-nav-left a, .coda-nav-right a { background: #000; color: #fff; padding: 5px; width: 10px }*/
+	/*.coda-nav-left a, .coda-nav-right a { background: #000; color: #fff; padding: 5px; width: 100px }*/
+  .coda-nav-left a, 
+  .coda-nav-right a {
+    background: url("/img/slider-arrows.png") no-repeat scroll 0 0 transparent;
+    height: 45px;
+    width: 45px;
+    text-indent: -999px;
+    overflow: hidden;
+  }
+
+  .coda-nav-left a:hover,
+  .coda-nav-left a:focus {
+    background-position: 0px -60px;
+  }
+ 
+  .coda-nav-left a:active {
+    background-position: 0px -120px;
+  }
+
+  .coda-nav-right a {
+    background-position: -85px 0;
+  }
 	
+  .coda-nav-right a:hover,
+  .coda-nav-right a:focus {
+    background-position: -85px -60px;
+  }
+
+  .coda-nav-right a:active {
+    background-position: -85px -120px;
+  }
+
 	/* Tab nav */
 	.coda-nav ul li a.current { background: #39c }
 	
