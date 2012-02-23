@@ -217,13 +217,21 @@ div[role=main] {
 .panel {
   height: 368px;
   width: 940px;
-  box-sizing: border-box;
+/*  box-sizing: border-box;
   -moz-box-sizing: border-box;
+*/
   margin: 0 auto;
-  background: url("../img/gladis.png") no-repeat scroll right bottom transparent;
-  padding-right: 251px;
+  /*padding-right: 251px;*/
   color: #656565;
   font: italic 18px Georgia,"Times New Roman",Times,serif;
+}
+
+#what-are {
+  background: url("../img/gladis.png") no-repeat scroll right bottom transparent;
+}
+
+#what-are p {
+  margin-right: 251px;
 }
 
 .panel h1 {
@@ -240,4 +248,29 @@ div[role=main] {
 
 .panel p {
   font-style: italic;
+}
+
+.coda-nav-left a, .coda-nav-right a {
+    background: url("/img/slider-arrows.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    display: block;
+    height: 40px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -999px;
+    top: 100px;
+    width: 40px;
+}
+
+.coda-nav-right a {
+  background-position: -84px 0;
+  left: auto;
+  right: 0;
+}
+
+#slideshow-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  overflow: hidden;
 }
