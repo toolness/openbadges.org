@@ -21,10 +21,12 @@
 	.coda-slider-no-js .coda-slider { height: 200px; overflow: auto !important; padding-right: 20px }
 	
 	/* Change the width of the entire slider (without dynamic arrows) */
-	.coda-slider, .coda-slider .panel { width: 600px } 
+	/*.coda-slider, .coda-slider .panel { width: 600px } */
+	.coda-slider, .coda-slider .panel { width: 850px } 
 	
 	/* Change margin and width of the slider (with dynamic arrows) */
-	.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { width: 600px }
+	/*.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { width: 600px }*/
+	.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { width: 850px }
 	.coda-slider-wrapper.arrows .coda-slider { margin: 0 10px }
 	
 	/* Arrow styling */
@@ -36,6 +38,12 @@
     width: 45px;
     text-indent: -999px;
     overflow: hidden;
+    position: absolute;
+  }
+
+  .coda-nav-left a {
+    left: 0;
+    top: 150px;
   }
 
   .coda-nav-left a:hover,
@@ -49,6 +57,8 @@
 
   .coda-nav-right a {
     background-position: -85px 0;
+    right: 0;
+    top: 150px;
   }
 	
   .coda-nav-right a:hover,
