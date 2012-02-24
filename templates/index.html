@@ -1,35 +1,113 @@
 {% extends "base.html" %}
 {% block section_id %}main{% endblock %}
 {% block page_id %}index{% endblock %}
+
+{% block head %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.fancybox.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css" media="screen" />
+  <script src="/scripts/slides.min.jquery.js"></script>
+  <script>
+    $(function(){
+      $('#slides').slides();
+      $('.fancybox').fancybox({
+        closeBtn: true,
+        arrows: false
+      });
+    });
+  </script>
+  <style>
+.slides_container {            
+  width:470px;
+  height:270px;                
+}
+.slides_container div {
+  width:470px;
+  height:270px;
+  display:block;
+}
+
+.pagination {
+  margin:26px auto 0;
+  width:100px;
+}
+
+.pagination li {
+  float:left;
+  margin:0 1px;
+  list-style:none;
+}
+
+.pagination li a {
+  display:block;
+  width:12px;
+  height:0;
+  padding-top:12px;
+  background-image:url(../img/pagination.png);
+  background-position:0 0;
+  float:left;
+  overflow:hidden;
+}
+
+.pagination li.current a {
+  background-position:0 -12px;
+}
+
+#badges-101 {
+  display: none;
+}
+
+  </style>
+{% endblock %}
+
 {% block content %}
 <section id="content">
-<section id="what-are-badges">
-  <div class="panel">
-    <h1>What are <em>Open Badges?</em></h1>
-    <p>
-      Learning today happens everywhere. But it's often difficult to get recognition for skills and achievements for most of that learning. Mozilla's Open Badges is working to solve that problem, making it easy to issue, earn and display badges across the web.
-    </p>
-    <a href="#" id="get-started" class="button">get started</a>
-  </div>
-</section>
-<section id="issuer-user-displayer">
-      <div class="col box">
-        <img class="badge" src="/img/issuer_mono.png" />
-        <h2>Issuer</h2>
-        <p>I want to issue badges</p>
+  <section id="what-are-badges">
+    <div class="panel">
+      <h1>What are <em>Open Badges?</em></h1>
+      <p>
+        Learning today happens everywhere. But it's often difficult to get recognition for skills and achievements for most of that learning. Mozilla's Open Badges is working to solve that problem, making it easy to issue, earn and display badges across the web.
+      </p>
+      <a href="#badges-101" id="get-started" class="button fancybox">get started</a>
+    </div>
+  </section>
+  <section id="issuer-user-displayer">
+    <div class="col box">
+      <img class="badge" src="/img/issuer_mono.png" />
+      <h2>Issuer</h2>
+      <p>I want to issue badges</p>
+    </div>
+    <div class="col box">
+      <img class="badge" src="/img/user_mono.png" />
+      <h2>User</h2>
+      <p>I want to earn and collect badges</p>
+    </div>
+    <div class="col box">
+      <img class="badge" src="/img/displayer_mono.png" />
+      <h2>Displayer</h2>
+      <p>I want to display badges</p>
+    </div>
+  </section>
+  <section id="badges-101">
+    <div id="slides">
+      <div class="slides_container">    
+        <div>
+          <h1>Slide 1</h1>
+          <p>The first slide.</p>
+          <a href="#" class="next">Next</a>
+        </div>
+        <div>
+          <h1>Slide 2</h1>
+          <p>The second slide.</p>        
+          <a href="#" class="next">Next</a>
+        </div>
+        <div>
+          <h1>Slide 3</h1>
+          <section id="quiz">
+          </section>
+        </div>
       </div>
-      <div class="col box">
-        <img class="badge" src="/img/user_mono.png" />
-        <h2>User</h2>
-        <p>I want to earn and collect badges</p>
-      </div>
-      <div class="col box">
-        <img class="badge" src="/img/displayer_mono.png" />
-        <h2>Displayer</h2>
-        <p>I want to display badges</p>
-      </div>
-    </ul>
-  </nav>
-</section>
+    </div>
+  </section>
 </section>
 {% endblock %}
