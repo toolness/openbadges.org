@@ -358,32 +358,51 @@ div[role=main] {
   -moz-animation-duration: 18s;
   -moz-animation-name: wiggle;
   -moz-animation-iteration-count: infinite;
+  -webkit-animation-duration: 18s;
+  -webkit-animation-name: wiggle;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation-duration: 18s;
+  -ms-animation-name: wiggle;
+  -ms-animation-iteration-count: infinite;
+  animation-duration: 18s;
+  animation-name: wiggle;
+  animation-iteration-count: infinite;
 }
 
 @-moz-keyframes wiggle {
-  from {
-    -moz-transform: rotate(0deg);
-  }
-  
-  90% {
-    -moz-transform: rotate(0deg);
-  }
-  
-  91% {
-    -moz-transform: rotate(-4deg);
-  }
+  0% { -moz-transform: rotate(0deg); }
+  90% { -moz-transform: rotate(0deg); }
+  91% { -moz-transform: rotate(-4deg); }
+  93% { -moz-transform: rotate(4deg); }
+  94% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(0deg); }
+}
+ 
+@-webkit-keyframes wiggle {
+  0% { -webkit-transform: rotate(0deg); }
+  90% { -webkit-transform: rotate(0deg); }
+  91% { -webkit-transform: rotate(-4deg); }
+  93% { -webkit-transform: rotate(4deg); }
+  94% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+ 
+@-ms-keyframes wiggle {
+  0% { -ms-transform: rotate(0deg); }
+  90% { -ms-transform: rotate(0deg); }
+  91% { -ms-transform: rotate(-4deg); }
+  93% { -ms-transform: rotate(4deg); }
+  94% { -ms-transform: rotate(0deg); }
+  100% { -ms-transform: rotate(0deg); }
+}
 
-  93% {
-    -moz-transform: rotate(4deg);
-  }
-
-  94% {
-    -moz-transform: rotate(0deg);
-  }
-  
-  to {
-    -moz-transform: rotate(0deg);
-  }
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  90% { transform: rotate(0deg); }
+  91% { transform: rotate(-4deg); }
+  93% { transform: rotate(4deg); }
+  94% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
   
 #what-are-badges .wrapper h1 {
