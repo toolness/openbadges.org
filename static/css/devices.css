@@ -330,7 +330,7 @@ a.button:after {
 div[role=main] {
   margin: 0.625em 0 0 0;
   background: none;
-  font: normal 20px Georgia,"Times New Roman",Times,serif;
+  font: normal 16px Georgia,"Times New Roman",Times,serif;
   color: #656565;
 }
 
@@ -420,6 +420,7 @@ div[role=main] {
 
 #what-are-badges .wrapper p {
   font-style: italic;
+  font-size: 20px;
   padding-right: 251px;
   max-width: 600px;
   margin-bottom: 50px;
@@ -462,7 +463,6 @@ div[role=main] {
 }
 
 #issuer-user-displayer p {
-  font-size: 16px;
   margin-top: 0px;
 }
 
@@ -537,3 +537,70 @@ div[role=main] {
   background-position:0 -12px;
 }
 
+/* Participant (issuer/displayer/user) page styles */
+
+.participant h1 {
+  font: normal 65px/65px "MetaWebPro-Black";
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.participant h2,
+.participant h3 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.participant h2 {
+  font-size: 44px;
+  line-height: 44px;
+  margin: 0;
+}
+
+.participant h3 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.participant li {
+  margin-bottom: 1em;
+}
+
+.participant a.top {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #656565;
+}
+
+.participant a.top:before {
+  content: "⇧ ";
+}
+
+.participant #content > section {
+  border-top: 2px dashed #f7b137;
+  padding: 30px 250px 30px 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.participant #content > section:first-child {
+  border-top: none;
+  font-size: 20px;
+  height: 330px;
+  margin-top: -60px;
+  padding-top: 100px;
+}
+
+#issuer #content > section:first-child {
+  background: url("../img/boris.png") no-repeat scroll right bottom transparent;
+}
+
+#issuer #hands {
+  width: 130px;
+  height: 122px;
+  background: url("../img/boris_hand.png") no-repeat scroll 0 0 transparent;
+  position: absolute;
+  right: 53px;
+  top: 100px;
+}
