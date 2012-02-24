@@ -459,11 +459,17 @@ div[role=main] {
 
 #issuer-user-displayer h2 {
   font: normal 35px "MetaWebPro-Black";
+  text-transform: uppercase;
   margin: 5px 0;
 }
 
 #issuer-user-displayer p {
   margin-top: 0px;
+}
+
+#issuer-user-displayer a {
+  color: #656565;
+  text-decoration: none;
 }
 
 .badge {
