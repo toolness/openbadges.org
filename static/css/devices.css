@@ -296,6 +296,11 @@ div[role=main] {
 }
 
 .badge {
+  display: block;
+  width: 125px;
+  height: 150px;
+  margin: 0 auto;
+  background: url("../img/index/goldbadges.png") no-repeat scroll 0 0 transparent;
   -moz-transition: -moz-transform 0.5s;
   -webkit-transition: -webkit-transform 0.5s;
   -o-transition: -o-transform 0.5s;
@@ -307,6 +312,18 @@ div[role=main] {
   -webkit-transform: scale(1.25) rotate(5deg);
   -o-transform: scale(1.25) rotate(5deg);
   -ms-transform: scale(1.25) rotate(5deg);
+}
+
+#issuer_badge {
+  background-position: -12px 0;
+}
+
+#user_badge {
+  background-position: -146px 0;
+}
+
+#displayer_badge {
+  background-position: -292px 0;
 }
 
 /* Sandstone buttons */
