@@ -39,3 +39,7 @@ Default template CSS - if you change anything here then updating will be a bit m
 .busta {
   max-width: 900px;
 }
+
+.masthead nav {
+  float: left;
+}
