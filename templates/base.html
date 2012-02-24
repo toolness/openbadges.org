@@ -35,9 +35,9 @@
             </nav>
         </div>
     </header>
-    <div role="main" class="section_identifier" id="page_identifier">
+    <div role="main" class="{% block section_id %}{% endblock %}" id="{% block page_id %}{% endblock %}">
         <div class="busta">
-            {% block content %} {% endblock %}
+          {% block content %} {% endblock %}
         </div>
     </div>
     </div>

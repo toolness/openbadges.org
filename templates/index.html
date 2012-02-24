@@ -1,36 +1,35 @@
 {% extends "base.html" %}
-{% block head %}
-  <link rel="stylesheet" href="/css/coda-slider-2.0.css" type="text/css" media="screen" />
-  <script src="/scripts/jquery.min.js"></script>
-  <script src="/scripts/jquery.coda-slider-2.0.js"></script>
-  <script src="/scripts/jquery.easing.1.3.js"></script>
-  <script>
-    $().ready(function() {
-      $('#slideshow').codaSlider({
-        dynamicTabs: false,
-        autoHeight: false
-      });
-    });
-  </script>
-{% endblock %}
-
+{% block section_id %}main{% endblock %}
+{% block page_id %}index{% endblock %}
 {% block content %}
-  <section id="slides">
-  <div class="coda-slider preload" id="slideshow">
-    <div class="panel" id="what-are">
-      <div class="panel-wrapper">
-        <h1>What are <em>Open Badges?</em></h1>
-        <p>
-          Learning today happens everywhere. But it's often difficult to get recognition for skills and achievements for most of that learning. Mozilla's Open Badges is working to solve that problem, making it easy to issue, earn and display badges across the web.
-        </p>
-      </div>
-    </div>
-    <div class="panel">
-      <div class="panel-wrapper">
-        <h1>Panel 2</h1>
-        Panel twoooo!
-      </div>
-    </div>
+<section id="content">
+<section id="what-are-badges">
+  <div class="panel">
+    <h1>What are <em>Open Badges?</em></h1>
+    <p>
+      Learning today happens everywhere. But it's often difficult to get recognition for skills and achievements for most of that learning. Mozilla's Open Badges is working to solve that problem, making it easy to issue, earn and display badges across the web.
+    </p>
+    <a href="#" id="get-started" class="button">get started</a>
   </div>
-  </div>
+</section>
+<section id="issuer-user-displayer">
+      <div class="col box">
+        <img class="badge" src="/img/issuer_mono.png" />
+        <h2>Issuer</h2>
+        <p>I want to issue badges</p>
+      </div>
+      <div class="col box">
+        <img class="badge" src="/img/user_mono.png" />
+        <h2>User</h2>
+        <p>I want to earn and collect badges</p>
+      </div>
+      <div class="col box">
+        <img class="badge" src="/img/displayer_mono.png" />
+        <h2>Displayer</h2>
+        <p>I want to display badges</p>
+      </div>
+    </ul>
+  </nav>
+</section>
+</section>
 {% endblock %}
