@@ -348,6 +348,16 @@ div[role=main] {
   margin: 0 auto;
 }
 
+#dml-speech {
+  background: url("../img/index/speechbubble.png") no-repeat scroll right bottom transparent;
+  width: 200px;
+  height: 150px;
+  border: 1px solid red;
+  position: absolute;
+  right:-50px;
+  top:0;
+}
+
 #what-are-badges #hands {
   width: 120px;
   height: 122px;
