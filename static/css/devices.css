@@ -593,13 +593,13 @@ div[role=main] {
 }
 
 #issuer #content > section:first-child {
-  background: url("../img/boris.png") no-repeat scroll right bottom transparent;
+  background: url("../img/issuer/boris.png") no-repeat scroll right bottom transparent;
 }
 
 #issuer #hands {
   width: 130px;
   height: 122px;
-  background: url("../img/boris_hand.png") no-repeat scroll 0 0 transparent;
+  background: url("../img/issuer/boris_hand.png") no-repeat scroll 0 0 transparent;
   position: absolute;
   right: 53px;
   top: 100px;
