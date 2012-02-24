@@ -18,12 +18,23 @@
   </script>
   <script>
     $(function(){
-      $('p#quiz_q2').hide();
-      $('p#quiz_q1 > :input[value="true"]').click(function(){
-        $('#quiz_q2').fadeIn();
+      $('#quiz > .question').hide();
+      $('#quiz > #win').hide();
+      $('#quiz :input.correct').click(function(){
+        console.log('click');
+        var nextQ = $(this).parents('.question').next();
+        $(nextQ).fadeIn();
+        $(this).unbind('click');
       });
+      $('#quiz > .question:first-child').show();
     });
   </script>
+  <style>
+    #quiz .question > span:first-child {
+      display: inline-block;
+      min-width: 40%;
+    }
+  </style>
 {% endblock %}
 
 {% block content %}
@@ -71,9 +82,30 @@
         <div>
           <h1>Slide 3</h1>
           <section id="quiz">
-            <p id="quiz_q1">Cows go "moo". <input type="radio" name="quiz_q1" value="true" /> True. <input type="radio" name="quiz_q1" value="false" /> False.</p>
-            <p id="quiz_q2">Chickens go "bawk". <input type="radio" name="quiz_q2" value="true" /> True. <input type="radio" name="quiz_q2" value="false" /> False.</p>
-            <p id="you_win"><h2>Woo!</h2></p>
+            <section class="question">
+              <span>Cows go "moo".</span> 
+              <span class="options">
+              <span class="option"><input type="radio" name="quiz_q1" value="true" class="correct" /> True.</span> 
+              <span class="option"><input type="radio" name="quiz_q1" value="false" /> False.</span>
+              </span>
+            </section>
+            <section class="question">
+              <span>Chickens go "bawk".</span> 
+              <span class="options">
+              <span class="option"><input type="radio" name="quiz_q2" value="true" class="correct" /> True.</span> 
+              <span class="option"><input type="radio" name="quiz_q2" value="false" /> False.</span>
+              </span>
+            </section>
+            <section class="question">
+              <span>Sheep go:</span>
+              <span class="options multi">
+                <span class="option"><input type="radio" name="quiz_q3" value="woof" /> Woof</span>
+                <span class="option"><input type="radio" name="quiz_q3" value="meow" /> Meow</span>
+                <span class="option"><input type="radio" name="quiz_q3" value="baa" class="correct" /> Baa</span>
+                <span class="option"><input type="radio" name="quiz_q3" value="ribbit" /> Ribbit</span>
+              </span>
+            </section>
+            <section id="win">Yay you win!</section>
           </section>
         </div>
       </div>
