@@ -1,35 +1,114 @@
 {% extends "base.html" %}
 {% block section_id %}main{% endblock %}
 {% block page_id %}index{% endblock %}
+
+{% block head %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/scripts/jquery.fancybox.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css" media="screen" />
+  <script src="/scripts/slides.min.jquery.js"></script>
+  <script>
+    $(function(){
+      $('#slides').slides();
+      $('.fancybox').fancybox({
+        closeBtn: true,
+        arrows: false
+      });
+    });
+  </script>
+  <script>
+    $(function(){
+      $('#quiz > .question').hide();
+      $('#quiz > #win').hide();
+      $('#quiz :input.correct').click(function(){
+        var nextQ = $(this).parents('.question').next();
+        $(nextQ).fadeIn();
+        $(this).unbind('click');
+      });
+      $('#quiz > .question:first-child').show();
+    });
+  </script>
+  <style>
+    #quiz .question > span:first-child {
+      display: inline-block;
+      min-width: 40%;
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
 <section id="content">
-<section id="what-are-badges">
-  <div class="panel">
-    <h1>What are <em>Open Badges?</em></h1>
-    <p>
-      Learning today happens everywhere. But it's often difficult to get recognition for skills and achievements for most of that learning. Mozilla's Open Badges is working to solve that problem, making it easy to issue, earn and display badges across the web.
-    </p>
-    <a href="#" id="get-started" class="button">get started</a>
-  </div>
-</section>
-<section id="issuer-user-displayer">
-      <div class="col box">
-        <a href="#" class="badge" id="issuer_badge"></a>
-        <h2>Issuer</h2>
-        <p>I want to issue badges</p>
+  <section id="what-are-badges">
+    <div class="wrapper">
+      <h1>What are <em>Open Badges?</em></h1>
+      <p>
+        Learning today happens everywhere. But it's often difficult to get recognition for skills and achievements for most of that learning. Mozilla's Open Badges is working to solve that problem, making it easy to issue, earn and display badges across the web.
+      </p>
+      <a href="#badges-101" id="get-started" class="button fancybox">get started</a>
+      <div id="hands"></div>
+    </div>
+  </section>
+  <section id="issuer-user-displayer">
+    <div class="col box">
+      <a href="#" class="badge" id="issuer_badge"></a>
+      <h2>Issuer</h2>
+      <p>I want to issue badges</p>
+    </div>
+    <div class="col box">
+      <a href="#" class="badge" id="user_badge"></a>
+      <h2>User</h2>
+      <p>I want to earn and collect badges</p>
+    </div>
+    <div class="col box">
+      <a href="#" class="badge" id="displayer_badge"></a>
+      <h2>Displayer</h2>
+      <p>I want to display badges</p>
+    </div>
+  </section>
+  <section id="badges-101">
+    <div id="slides" role="main">
+      <div class="slides_container">    
+        <div>
+          <h1>Slide 1</h1>
+          <p>The first slide.</p>
+          <a href="#" class="next">Next</a>
+        </div>
+        <div>
+          <h1>Slide 2</h1>
+          <p>The second slide.</p>        
+          <a href="#" class="next">Next</a>
+        </div>
+        <div>
+          <h1>Slide 3</h1>
+          <section id="quiz">
+            <section class="question">
+              <span>Cows go "moo".</span> 
+              <span class="options">
+              <span class="option"><input type="radio" name="quiz_q1" value="true" class="correct" /> True.</span> 
+              <span class="option"><input type="radio" name="quiz_q1" value="false" /> False.</span>
+              </span>
+            </section>
+            <section class="question">
+              <span>Chickens go "bawk".</span> 
+              <span class="options">
+              <span class="option"><input type="radio" name="quiz_q2" value="true" class="correct" /> True.</span> 
+              <span class="option"><input type="radio" name="quiz_q2" value="false" /> False.</span>
+              </span>
+            </section>
+            <section class="question">
+              <span>Sheep go:</span>
+              <span class="options multi">
+                <span class="option"><input type="radio" name="quiz_q3" value="woof" /> Woof</span>
+                <span class="option"><input type="radio" name="quiz_q3" value="meow" /> Meow</span>
+                <span class="option"><input type="radio" name="quiz_q3" value="baa" class="correct" /> Baa</span>
+                <span class="option"><input type="radio" name="quiz_q3" value="ribbit" /> Ribbit</span>
+              </span>
+            </section>
+            <section id="win">Yay you win!</section>
+          </section>
+        </div>
       </div>
-      <div class="col box">
-        <a href="#" class="badge" id="user_badge"></a>
-        <h2>User</h2>
-        <p>I want to earn and collect badges</p>
-      </div>
-      <div class="col box">
-        <a href="#" class="badge" id="displayer_badge"></a>
-        <h2>Displayer</h2>
-        <p>I want to display badges</p>
-      </div>
-    </ul>
-  </nav>
-</section>
+    </div>
+  </section>
 </section>
 {% endblock %}

@@ -20,26 +20,26 @@
         document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, '');
     </script>
     <div id="header-and-content">
-    <header class="masthead">
-        <div class="busta">
-            <a href="http://www.mozilla.org" id="tabzilla">mozilla.org</a>
-            <a id="logo">Open Badges</a>
-            <nav>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Issuer</a></li>
-                    <li><a href="#">Learner</a></li>
-                    <li><a href="#">Displayer</a></li>
-                    <li><a href="#">Faq</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div role="main" class="{% block section_id %}{% endblock %}" id="{% block page_id %}{% endblock %}">
-        <div class="busta">
-          {% block content %} {% endblock %}
-        </div>
-    </div>
+      <header class="masthead">
+          <div class="busta">
+              <a href="http://www.mozilla.org" id="tabzilla">mozilla.org</a>
+              <a id="logo">Open Badges</a>
+              <nav>
+                  <ul>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Issuer</a></li>
+                      <li><a href="#">Learner</a></li>
+                      <li><a href="#">Displayer</a></li>
+                      <li><a href="#">Faq</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+      <div role="main" class="{% block section_id %}{% endblock %}" id="{% block page_id %}{% endblock %}">
+          <div class="busta">
+            {% block content %} {% endblock %}
+          </div>
+      </div>
     </div>
     <aside>
         <section class="external">
