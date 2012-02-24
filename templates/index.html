@@ -16,85 +16,12 @@
       });
     });
   </script>
-  <style>
-.slides_container {            
-  width:470px;
-  height:270px;                
-}
-.slides_container div {
-  width:470px;
-  height:270px;
-  display:block;
-}
-
-.pagination {
-  margin:26px auto 0;
-  width:100px;
-}
-
-.pagination li {
-  float:left;
-  margin:0 1px;
-  list-style:none;
-}
-
-.pagination li a {
-  display:block;
-  width:12px;
-  height:0;
-  padding-top:12px;
-  background-image:url(../img/pagination.png);
-  background-position:0 0;
-  float:left;
-  overflow:hidden;
-}
-
-.pagination li.current a {
-  background-position:0 -12px;
-}
-
-#badges-101 {
-  display: none;
-}
-
-@-moz-keyframes wiggle {
-  from {
-    -moz-transform: rotate(0deg);
-  }
-  
-  80% {
-    -moz-transform: rotate(0deg);
-  }
-  
-  82% {
-    -moz-transform: rotate(-4deg);
-  }
-
-  84% {
-    -moz-transform: rotate(4deg);
-  }
-
-  86% {
-    -moz-transform: rotate(0deg);
-  }
-  
-  to {
-    -moz-transform: rotate(0deg);
-  }
-}
-
-#hands {
-  -moz-animation-duration: 10s;
-  -moz-animation-name: wiggle;
-  -moz-animation-iteration-count: infinite;
-}
-  </style>
 {% endblock %}
 
 {% block content %}
 <section id="content">
   <section id="what-are-badges">
-    <div class="panel">
+    <div class="wrapper">
       <h1>What are <em>Open Badges?</em></h1>
       <p>
         Learning today happens everywhere. But it's often difficult to get recognition for skills and achievements for most of that learning. Mozilla's Open Badges is working to solve that problem, making it easy to issue, earn and display badges across the web.
@@ -105,23 +32,23 @@
   </section>
   <section id="issuer-user-displayer">
     <div class="col box">
-      <img class="badge" src="/img/issuer_mono.png" />
+      <img class="badge" src="/img/index/issuer_mono.png" />
       <h2>Issuer</h2>
       <p>I want to issue badges</p>
     </div>
     <div class="col box">
-      <img class="badge" src="/img/user_mono.png" />
+      <img class="badge" src="/img/index/user_mono.png" />
       <h2>User</h2>
       <p>I want to earn and collect badges</p>
     </div>
     <div class="col box">
-      <img class="badge" src="/img/displayer_mono.png" />
+      <img class="badge" src="/img/index/displayer_mono.png" />
       <h2>Displayer</h2>
       <p>I want to display badges</p>
     </div>
   </section>
   <section id="badges-101">
-    <div id="slides">
+    <div id="slides" role="main">
       <div class="slides_container">    
         <div>
           <h1>Slide 1</h1>
