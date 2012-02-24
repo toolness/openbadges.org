@@ -21,7 +21,6 @@
       $('#quiz > .question').hide();
       $('#quiz > #win').hide();
       $('#quiz :input.correct').click(function(){
-        console.log('click');
         var nextQ = $(this).parents('.question').next();
         $(nextQ).fadeIn();
         $(this).unbind('click');
