@@ -57,6 +57,37 @@
   display: none;
 }
 
+@-moz-keyframes wiggle {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  
+  80% {
+    -moz-transform: rotate(0deg);
+  }
+  
+  82% {
+    -moz-transform: rotate(-4deg);
+  }
+
+  84% {
+    -moz-transform: rotate(4deg);
+  }
+
+  86% {
+    -moz-transform: rotate(0deg);
+  }
+  
+  to {
+    -moz-transform: rotate(0deg);
+  }
+}
+
+#hands {
+  -moz-animation-duration: 10s;
+  -moz-animation-name: wiggle;
+  -moz-animation-iteration-count: infinite;
+}
   </style>
 {% endblock %}
 
@@ -69,6 +100,7 @@
         Learning today happens everywhere. But it's often difficult to get recognition for skills and achievements for most of that learning. Mozilla's Open Badges is working to solve that problem, making it easy to issue, earn and display badges across the web.
       </p>
       <a href="#badges-101" id="get-started" class="button fancybox">get started</a>
+      <div id="hands"></div>
     </div>
   </section>
   <section id="issuer-user-displayer">
