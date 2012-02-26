@@ -593,7 +593,7 @@ div[role=main] {
 .participant #content > section:first-child {
   border-top: none;
   font-size: 20px;
-  height: 330px;
+  min-height: 200px; /* this + top/bottom padding = img height */
   margin-top: -60px;
   padding-top: 100px;
 }
