@@ -593,20 +593,48 @@ div[role=main] {
 .participant #content > section:first-child {
   border-top: none;
   font-size: 20px;
-  min-height: 200px; /* this + top/bottom padding = img height */
   margin-top: -60px;
   padding-top: 100px;
 }
 
 #issuer #content > section:first-child {
-  background: url("../img/issuer/boris.png") no-repeat scroll right bottom transparent;
+  background: url("../img/participants/boris.png") no-repeat scroll right top transparent;
+  min-height: 200px; /* this + top/bottom padding = img height */
 }
 
 #issuer #hands {
   width: 130px;
   height: 122px;
-  background: url("../img/issuer/boris_hand.png") no-repeat scroll 0 0 transparent;
+  background: url("../img/participants/boris_hand.png") no-repeat scroll 0 0 transparent;
   position: absolute;
   right: 53px;
   top: 100px;
+}
+
+#user #content > section:first-child {
+  background: url("../img/participants/dorothy.png") no-repeat scroll right top transparent;
+  min-height: 334px; /* this + top/bottom padding = img height */
+}
+
+#user #hands {
+  width: 130px;
+  height: 129px;
+  background: url("../img/participants/dorothy_hands.png") no-repeat scroll 0 0 transparent;
+  position: absolute;
+  right: 53px;
+  top: -30px;
+}
+
+#displayer #content > section:first-child {
+  background: url("../img/participants/morty.png") no-repeat scroll right top transparent;
+  min-height: 234px; /* this + top/bottom padding = img height */
+}
+
+#displayer #hands {
+  width: 113px;
+  height: 119px;
+  background: url("../img/participants/morty_hands.png") no-repeat scroll 0 0 transparent;
+  position: absolute;
+  right: 203px;
+  top: 200px;
 }
