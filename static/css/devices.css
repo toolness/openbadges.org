@@ -612,8 +612,8 @@ div[role=main] {
 }
 
 #user #content > section:first-child {
-  background: url("../img/participants/dorothy.png") no-repeat scroll right top transparent;
-  min-height: 334px; /* this + top/bottom padding = img height */
+  background: url("../img/participants/dorothy.png") no-repeat scroll right 30px transparent;
+  min-height: 285px; /* this + top/bottom padding = img height */
 }
 
 #user #hands {
@@ -628,6 +628,7 @@ div[role=main] {
 #displayer #content > section:first-child {
   background: url("../img/participants/morty.png") no-repeat scroll right top transparent;
   min-height: 234px; /* this + top/bottom padding = img height */
+  padding-right: 330px;
 }
 
 #displayer #hands {
@@ -636,5 +637,5 @@ div[role=main] {
   background: url("../img/participants/morty_hands.png") no-repeat scroll 0 0 transparent;
   position: absolute;
   right: 203px;
-  top: 200px;
+  top: 140px;
 }
