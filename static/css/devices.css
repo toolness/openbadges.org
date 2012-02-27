@@ -293,7 +293,7 @@ a.button:after {
   font-size: 54px;
   line-height: 48px;
   float: left;
-  margin-right: 75px;
+  margin: 6px 75px 0 0;
 }
 
 #logo a {
