@@ -9,6 +9,28 @@
   <script src="/scripts/slides.min.jquery.js"></script>
   <script>
     $(function(){
+      var win = $('#badges-101 #win').remove();
+      var questions = $('.quiz').length;
+      var answered = 0;
+      $('.quiz .discussion').hide();
+      $('.quiz').each(function(){
+        var discussion = $(this).find('.discussion');
+        $(this).find('.correct').one('click', function(){
+          discussion.fadeIn();          
+          answered++;
+          if (answered == questions) {
+            $('#final').empty();
+            $('#final').append($(win).contents());
+          }
+        });
+        $(this).find('.options .button:not(.correct)').click(function(){
+          console.log('NO!');
+        });
+      });
+    });
+  </script>
+  <script>
+    $(function(){
       $('#slides').slides();
       $('.fancybox').fancybox({
         closeBtn: true,
@@ -16,24 +38,6 @@
       });
     });
   </script>
-  <script>
-    $(function(){
-      $('#quiz > .question').hide();
-      $('#quiz > #win').hide();
-      $('#quiz :input.correct').click(function(){
-        var nextQ = $(this).parents('.question').next();
-        $(nextQ).fadeIn();
-        $(this).unbind('click');
-      });
-      $('#quiz > .question:first-child').show();
-    });
-  </script>
-  <style>
-    #quiz .question > span:first-child {
-      display: inline-block;
-      min-width: 40%;
-    }
-  </style>
 {% endblock %}
 
 {% block content %}
@@ -76,43 +80,47 @@
     <div id="slides" role="main">
       <div class="slides_container">    
         <div>
-          <h1>Slide 1</h1>
-          <p>The first slide.</p>
-          <a href="#" class="next">Next</a>
+          <h1>Open Badges</h1>
+          <p>Helping learners everywhere display skills, unlock career opportunities and level up in life</p>
+          <p>Let’s go through some of the basics about badges and earn your first badge in the process.</p>
+          <a href="#" class="next button">Next</a>
         </div>
         <div>
-          <h1>Slide 2</h1>
-          <p>The second slide.</p>        
-          <a href="#" class="next">Next</a>
+          <p>Learning today happens everywhere. But it's often difficult to get recognition for skills and achievements that happen outside of school. Mozilla's Open Badges is working to solve that problem, making it easy for anyone to issue, earn and display badges across the web -- through a shared infrastructure that's free and open to all.</p>        
+          <a href="#" class="next button">Next</a>
         </div>
         <div>
-          <h1>Slide 3</h1>
-          <section id="quiz">
-            <section class="question">
-              <span>Cows go "moo".</span> 
-              <span class="options">
-              <span class="option"><input type="radio" name="quiz_q1" value="true" class="correct" /> True.</span> 
-              <span class="option"><input type="radio" name="quiz_q1" value="false" /> False.</span>
-              </span>
-            </section>
-            <section class="question">
-              <span>Chickens go "bawk".</span> 
-              <span class="options">
-              <span class="option"><input type="radio" name="quiz_q2" value="true" class="correct" /> True.</span> 
-              <span class="option"><input type="radio" name="quiz_q2" value="false" /> False.</span>
-              </span>
-            </section>
-            <section class="question">
-              <span>Sheep go:</span>
-              <span class="options multi">
-                <span class="option"><input type="radio" name="quiz_q3" value="woof" /> Woof</span>
-                <span class="option"><input type="radio" name="quiz_q3" value="meow" /> Meow</span>
-                <span class="option"><input type="radio" name="quiz_q3" value="baa" class="correct" /> Baa</span>
-                <span class="option"><input type="radio" name="quiz_q3" value="ribbit" /> Ribbit</span>
-              </span>
-            </section>
-            <section id="win">Yay you win!</section>
+          <p>The Mozilla Open Badge Infrastructure enables any organization or community to issue badges backed by their own seal of approval. Learners/users can then collect badges from different sources and share them across the web, unlocking new career and learning opportunities.</p>
+          <a href="#" class="next button">Next</a>
+        </div>
+        <div class="quiz">
+          <p>Now let's see how much you get badges!</p>
+          <p>Some true statement.</p>
+          <section class="options">
+            <a href="#" class="true button correct">True</a>
+            <a href="#" class="false button">False</a>
           </section>
+          <section class="discussion">
+            <p>That's right! And here's why...</p>
+            <a href="#" class="next button">Next</a>
+          </section>
+        </div>
+        <div class="quiz">
+          <p>Some false statement.</p>
+          <section class="options">
+            <a href="#" class="true button">True</a>
+            <a href="#" class="false button correct">False</a>
+          </section>
+          <section class="discussion">
+            <p>That's right! And here's why...</p>
+            <a href="#" class="next button">Next</a>
+          </section>
+        </div>
+        <div id="final">
+          <p>Take the quiz to see if you get badges!</p>
+        </div>
+        <div id="win">
+          <p>Yay, you win!</p>
         </div>
       </div>
     </div>

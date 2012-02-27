@@ -661,3 +661,27 @@ div[role=main] {
   right: 203px;
   top: 140px;
 }
+
+#badges-101 .button {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+}
+
+#badges-101 .next {
+  position: absolute;
+  bottom: 10px; 
+  right: 20px;
+}
+
+#badges-101 .true {
+  float: left;
+}
+
+#badges-101 .false {
+  float: right;
+}
+
+#badges-101 .options {
+  overflow: hidden;
+}
