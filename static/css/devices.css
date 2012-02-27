@@ -291,10 +291,18 @@ a.button:after {
 #logo {
   font-family: "Bebas-Neue";
   font-size: 54px;
-  color: #444;
-  text-decoration: none;
+  line-height: 48px;
   float: left;
   margin-right: 75px;
+}
+
+#logo a {
+  color: #444;
+  text-decoration: none;
+}
+
+#logo a img {
+  display: block;
 }
 
 /* External footer */
