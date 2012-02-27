@@ -352,9 +352,9 @@ div[role=main] {
 
 #what-are-badges .wrapper {
   background: url("../img/index/gladis_body.png") no-repeat scroll right bottom transparent;
-  width: 80%;
+  width: 90%;
   height: 368px;
-  margin: 0 auto;
+  margin: 0 auto 0 0;
   position: relative;
 }
 
@@ -363,8 +363,8 @@ div[role=main] {
   width: 200px;
   height: 150px;
   position: absolute;
-  right:-10px;
-  top:0;
+  right: 0;
+  top: 0;
   padding: 30px;
   padding-top: 40px;
   text-align: center;
