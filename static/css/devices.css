@@ -339,6 +339,7 @@ div[role=main] {
 
 #what-are-badges {
   font-style: italic;
+  overflow: hidden;
 }
 
 #what-are-badges .wrapper {
