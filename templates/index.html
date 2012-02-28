@@ -24,7 +24,58 @@
         $('#nav-panel').hide();
         $('#get-badge').fadeIn();
       }); 
-      var winPanel = $('#win').hide();
+
+      $("#get-badge form").submit(function() {
+        var email = $(this).find("input#email").val().trim();
+        if (QuickBadge.validateEmail(email)) {
+          var baseURI = $('<a href="./"></a>')[0].href;
+          var publish = QuickBadge.publish({
+            service: "http://hackpub.hackasaurus.org/publish",
+            assertion: {
+              "recipient": email,
+              "badge": {
+                "version": "0.0.1",
+                "name": "Badges 101",
+                "image": $("#badges101")[0].src,
+                "description": "You really get badges!",
+                "criteria": baseURI,
+                "issuer": {
+                  "origin": "http://poof.hksr.us/",
+                  "name": "Open Badges",
+                  "org": "Experimental Badge Authority",
+                  "contact": "rawr@hksr.us"
+                }
+              }
+            }
+          });
+          $("#get-badge form").fadeOut(function() {
+            $("#throbber").fadeIn(function() {
+              publish.fail(function() {
+                alert("Sorry, an error occurred. Please try again later.");
+                $("#get-badge form").show();
+                $("#throbber").hide();
+              });
+              publish.done(function(url) {
+                $("#throbber").fadeOut();
+                QuickBadge.issue(url).done(function(errors, successes) {
+                  if (successes.length) {
+                    $("#get-badge .instructions").hide();
+                  }
+                  else {
+                    $("#get-badge form").show();
+                    $("#throbber").hide();
+                  }
+                  console.log("errors", errors, "successes", successes);
+                });
+              });
+            });
+          });
+        } else
+          alert("Please provide a valid e-mail address.");
+        return false;
+      });
+
+      $('#win').hide();
       function win(){
         $('#incomplete').hide();
         $('#win').show();
@@ -169,7 +220,7 @@
             <p>Take the quiz to see if you get badges!</p>
           </section>
           <section id="win">
-            <img id="badges101" src="http://localhost:8000/img/index/101badge.png" />
+            <img id="badges101" src="/img/index/101badge.png" />
             <h1>Badges 101</h1>
             <p>Congratulations! You’ve just earned the Badges 101 badge!</p>
             <section id="nav-panel">
@@ -179,7 +230,7 @@
               </nav>
             </section>
             <section id="get-badge">
-              <p>If you'd like to send this badge to your backpack, just fill out the form below.</p>
+              <p class="instructions">If you'd like to send this badge to your backpack, just fill out the form below.</p>
               <form>
                 <input type="text" id="email" placeholder="E-mail Address">
                 <input type="submit" value="Send To Backpack »" id="submit">
