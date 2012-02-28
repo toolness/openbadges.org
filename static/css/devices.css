@@ -785,6 +785,24 @@ div[role=main] {
   font-size: 18px;
 }
 
+#badges-101 #quiz-intro {
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+}
+
+#badges-101 .question {
+  text-align: center;
+}
+
+#badges-101 .discussion {
+  margin-top: 50px;
+}
+
+#badges-101 .discussion .answer {
+  font-style: italic;
+}
+
 #badges-101 h1 {
   font: normal 60px/56px "MetaWebPro-Black";
   text-transform: uppercase;
@@ -817,19 +835,19 @@ div[role=main] {
 #badges-101 #final #push-to-backpack {
   background: url('/img/index/backpack.png') no-repeat scroll center top transparent;
   display: block;
-  padding-top: 123px;
+  padding-top: 90px;
+  margin-top: 30px;
   float: left;
   width: 168px;
-  margin-top: 5px;
 }
 
 #badges-101 #final #navigator {
   background: url('/img/index/navigatorbadge.png') no-repeat scroll center top transparent;
   display: block;
-  padding-top: 123px;
+  padding-top: 90px;
+  margin-top: 30px;
   float: right;
   width: 168px;
-  margin-top: 5px;
 }
 
 #faq header nav {
