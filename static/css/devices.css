@@ -701,6 +701,24 @@ div[role=main] {
 
 #badges-101 .true {
   float: left;
+  background-color: #81BC2E; 
+  /* IE10 */ 
+  background-image: -ms-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+
+  /* Mozilla Firefox */ 
+  background-image: -moz-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+
+  /* Opera */ 
+  background-image: -o-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81BC2E), color-stop(1, #659C28));
+
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+
+  /* Proposed W3C Markup */ 
+  background-image: linear-gradient(top, #81BC2E 0%, #659C28 100%);
 }
 #badges-101 .true:after {
   content: "";
@@ -708,6 +726,24 @@ div[role=main] {
 
 #badges-101 .false {
   float: right;
+  background-color: #D63A2B; 
+  /* IE10 */ 
+  background-image: -ms-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+
+  /* Mozilla Firefox */ 
+  background-image: -moz-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+
+  /* Opera */ 
+  background-image: -o-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+
+  /* Webkit (Safari/Chrome 10) */ 
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E55927), color-stop(1, #D63A2B));
+
+  /* Webkit (Chrome 11+) */ 
+  background-image: -webkit-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+
+  /* Proposed W3C Markup */ 
+  background-image: linear-gradient(top, #E55927 0%, #D63A2B 100%);
 }
 #badges-101 .false:after {
   content: "";
