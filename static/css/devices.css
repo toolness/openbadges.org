@@ -337,7 +337,8 @@ a.button:after {
   font-size: 14px;
 }
 
-.partners h2 {
+.partners h2,
+.partners a {
   color: #87888b;
 }
 
@@ -626,13 +627,13 @@ a.top:before {
 }
 
 #badges-101 #intro p {
-  margin: 35px 0;
+  margin: 30px 0;
 }
 
 #badges-101 #intro .tagline {
   font-size: 14px;
   font-style: italic;
-  margin-top: 0;
+  margin-top: 4px;
 }
 
 #badges-101 .options {
