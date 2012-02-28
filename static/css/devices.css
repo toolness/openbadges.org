@@ -312,8 +312,17 @@ a.button:after {
 }
 
 .external h2,
-.external p {
+.external p,
+.external li {
   color: #9c9c9c;
+}
+
+.external h3 {
+  font-size: 14px;
+  color: #9c9c9c;
+  font-style: italic;
+  font-weight: normal;
+  margin: -1em 0 14px 0;
 }
 
 .external li {
