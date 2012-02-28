@@ -758,6 +758,15 @@ div[role=main] {
   font-style: italic;
 }
 
+#badges-101 #final #get-badge .instructions {
+  font-style: normal;
+  margin: 20px 0;
+}
+
+#badges-101 #final #get-badge {
+  padding: 20px 0;
+}
+
 #badges-101 #intro p {
   margin: 35px 0;
 }
