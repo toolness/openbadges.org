@@ -20,6 +20,7 @@
 
       /* Badges 101 badge acceptance panel */
       $('#get-badge').hide();
+      $('#after-badge').hide();
       $('#push-to-backpack').one('click', function(){
         $('#nav-panel').hide();
         $('#get-badge').fadeIn();
@@ -63,7 +64,8 @@
                 $("#throbber").fadeOut();
                 QuickBadge.issue(url).done(function(errors, successes) {
                   if (successes.length) {
-                    $("#get-badge .instructions").hide();
+                    $("#get-badge").hide();
+                    $("#after-badge").show();
                   }
                   else {
                     $("#get-badge form").show();
@@ -235,7 +237,7 @@
             <p>Congratulations! You’ve just earned the Badges 101 badge!</p>
             <section id="nav-panel">
               <nav>
-                <a id="push-to-backpack" href="#">Push badge to your backpack</a>
+                <a id="push-to-backpack" class="backpack" href="#">Push badge to your backpack</a>
                 <a id="navigator" href="http://toolness.github.com/hackasaurus-parable/navigator-badge/#">Go earn the Hackasaurus Navigator badge</a>
               </nav>
             </section>
@@ -246,6 +248,12 @@
                 <input type="submit" value="Send To Backpack »" id="submit">
               </form>
               <img src="/img/ajax-loader.gif" id="throbber" style="display: none">
+            </section>
+            <section id="after-badge">
+              <nav>
+                <a class="backpack" href="http://beta.openbadges.org/">Visit your backpack</a>
+                <a id="navigator" href="http://toolness.github.com/hackasaurus-parable/navigator-badge/#">Go earn the Hackasaurus Navigator badge</a>
+              </nav>
             </section>
           </section>
         </div>

@@ -742,7 +742,7 @@ a.top:before {
   margin: 0 auto;
 }
 
-#badges-101 #final #push-to-backpack {
+#badges-101 #final .backpack {
   background: url('/img/index/backpack.png') no-repeat scroll center top transparent;
   display: block;
   padding-top: 90px;
