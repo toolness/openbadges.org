@@ -355,7 +355,9 @@ a.button:after {
   padding: 0 10px;
 }
 .disclaimers ul li:first-child {
-  border-left: none;
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 /* Main body */
