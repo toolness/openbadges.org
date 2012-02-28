@@ -92,17 +92,16 @@
       $('.quiz').each(function(){
         var discussion = $(this).find('.discussion');
         /* Show the discussion when they click the right answer */
-        $(this).find('.correct').one('click', function(){
+        $(this).find('.options').one('click', function(evt){
+          if($(evt.target).hasClass('correct'))
+            $(discussion).find('.answer').text("That's right!");
+          else 
+            $(discussion).find('.answer').text("That's wrong!");
           discussion.fadeIn();          
           answered++;
           if (answered == questions) {
             win();
           }
-        });
-        /* Do something when they click the wrong answer */
-        // TODO: display a "Try again!" message
-        $(this).find('.options .button:not(.correct)').click(function(){
-          console.log('NO!');
         });
       });
 
@@ -187,7 +186,7 @@
             <a href="#" class="false button">False</a>
           </section>
           <section class="discussion">
-            <p>Answer: True. There are countless examples of learning occurring through informal channels. The web and other new learning spaces provide exciting new ways to gain skills and experiences -- from online courses, learning networks and mentorship to peer learning, volunteering and after-school programs.</p>
+            <p><span class="answer">Answer: True.</span> There are countless examples of learning occurring through informal channels. The web and other new learning spaces provide exciting new ways to gain skills and experiences -- from online courses, learning networks and mentorship to peer learning, volunteering and after-school programs.</p>
             <a href="#" class="next button">Next</a>
           </section>
         </div>
@@ -198,7 +197,7 @@
             <a href="#" class="false button correct">False</a>
           </section>
           <section class="discussion">
-            <p>Answer: False. While degrees do convey some basic information about people’s skills, they often tend to be abstracted from the actual learning that has occurred. Two people with the same degree may have taken very different learning pathways or developed different skills along the way. And many people without a formal degree may possess a vast set of job-relevant skills. Badges can help by providing a more complete picture, recognizing a more granular set of skills, and recording the entire learning path.</p>
+            <p><span class="answer">Answer: False.</span> While degrees do convey some basic information about people’s skills, they often tend to be abstracted from the actual learning that has occurred. Two people with the same degree may have taken very different learning pathways or developed different skills along the way. And many people without a formal degree may possess a vast set of job-relevant skills. Badges can help by providing a more complete picture, recognizing a more granular set of skills, and recording the entire learning path.</p>
             <a href="#" class="next button">Next</a>
           </section>
         </div>
@@ -210,7 +209,7 @@
           </section>
           <section class="discussion">
             <p>
-              Answer: False. Resumes are documents that people write themselves. Granular information on a resume is often difficult to validate. With digital badges, users can click on a given badge to access information about the badge’s issuer, how the badge was earned, and more. In other words, badges can go beyond traditional resumes by providing built-in evidence for validation.  
+              <span class="answer">Answer: False.</span> Resumes are documents that people write themselves. Granular information on a resume is often difficult to validate. With digital badges, users can click on a given badge to access information about the badge’s issuer, how the badge was earned, and more. In other words, badges can go beyond traditional resumes by providing built-in evidence for validation.  
             </p>
             <a href="#" class="next button">Next</a>
           </section>
