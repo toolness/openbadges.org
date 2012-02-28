@@ -40,10 +40,14 @@
                 "description": "You really get badges!",
                 "criteria": baseURI,
                 "issuer": {
-                  "origin": "http://poof.hksr.us/",
+                  // TODO: The 'origin' isn't checked right now,
+                  // so we will take advantage of this to use an
+                  // authoritative domain that's good for
+                  // demo purposes.
+                  "origin": "http://badges-101.openbadges.org/",
                   "name": "Open Badges",
                   "org": "Experimental Badge Authority",
-                  "contact": "rawr@hksr.us"
+                  "contact": "hai2u@openbadges.org"
                 }
               }
             }
@@ -219,7 +223,8 @@
             <p>Take the quiz to see if you get badges!</p>
           </section>
           <section id="win">
-            <img id="badges101" src="/img/index/101badge.png" />
+            <!-- Point to the image on github so that the backpack can access it if the user decides to send their badge there. -->
+            <img id="badges101" src="https://github.com/toolness/openbadges.org/raw/master/static/img/index/101badge.png" />
             <h1>Badges 101</h1>
             <p>Congratulations! You’ve just earned the Badges 101 badge!</p>
             <section id="nav-panel">
