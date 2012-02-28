@@ -530,12 +530,12 @@ div[role=main] {
 }
 
 .slides_container {            
-  width:470px;
-  height:270px;                
+  width:640px;
+  height:420px;                
 }
 .slides_container div {
-  width:470px;
-  height:270px;
+  width:640px;
+  height:420px;
   display:block;
 }
 
@@ -674,14 +674,115 @@ div[role=main] {
   right: 20px;
 }
 
+#badges-101 #intro .next {
+  float: none;
+  position: static;
+  margin: 0 auto;
+}
+
+#badges-101 .pagination {
+  padding: 0;
+}
+
+#badges-101 .options {
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 #badges-101 .true {
   float: left;
+}
+#badges-101 .true:after {
+  content: "";
 }
 
 #badges-101 .false {
   float: right;
 }
+#badges-101 .false:after {
+  content: "";
+}
 
-#badges-101 .options {
-  overflow: hidden;
+#badges-101 #intro,
+#badges-101 #final {
+  text-align: center;
+}
+
+#badges-101 #final p {
+  font-style: italic;
+}
+
+#badges-101 #intro p {
+  margin: 35px 0;
+}
+
+#badges-101 #intro .tagline {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 0;
+}
+
+#badges-101 .slide {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px;
+  position: relative;
+}
+
+#badges-101 .lesson p {
+  font-size: 18px;
+  margin: 80px;
+}
+
+#badges-101 .quiz {
+  font-size: 18px;
+}
+
+#badges-101 h1 {
+  font: normal 60px/56px "MetaWebPro-Black";
+  text-transform: uppercase;
+  display: block;
+  margin: 0;
+}
+
+#badges-101 #intro h1 {
+  background: url('/img/index/101badge.png') no-repeat scroll center top transparent;
+  padding-top: 145px;
+}
+
+#badges-101 #final h1 {
+  margin-top: -20px;
+}
+
+#badges-101 #final p {
+  margin: 10px 0 2px 0;
+}
+
+#badges-101 #final img {
+  margin-top: -35px;
+}
+
+#badges-101 #final nav {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#badges-101 #final #push-to-backpack {
+  background: url('/img/index/backpack.png') no-repeat scroll center top transparent;
+  display: block;
+  padding-top: 123px;
+  float: left;
+  width: 168px;
+  margin-top: 5px;
+}
+
+#badges-101 #final #navigator {
+  background: url('/img/index/navigatorbadge.png') no-repeat scroll center top transparent;
+  display: block;
+  padding-top: 123px;
+  float: right;
+  width: 168px;
+  margin-top: 5px;
 }
