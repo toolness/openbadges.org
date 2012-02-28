@@ -567,14 +567,21 @@ div[role=main] {
 
 /* Participant (issuer/displayer/user) page styles */
 
-.participant h1 {
+.participant h1,
+#faq h1,
+#faq h2 {
   font: normal 65px/65px "MetaWebPro-Black";
   margin-bottom: 0;
   text-transform: uppercase;
 }
 
+#faq h2 {
+  font-size: 42px;
+}
+
 .participant h2,
-.participant h3 {
+.participant h3,
+#faq h3 {
   font-weight: normal;
   font-style: italic;
 }
@@ -585,7 +592,8 @@ div[role=main] {
   margin: 0;
 }
 
-.participant h3 {
+.participant h3,
+#faq h3 {
   font-size: 24px;
   line-height: 24px;
 }
@@ -605,7 +613,8 @@ div[role=main] {
   content: "⇧ ";
 }
 
-.participant #content > section {
+.participant #content > section ,
+#faq #content > section {
   border-top: 2px dashed #f7b137;
   padding: 30px 250px 30px 0;
   margin-bottom: 20px;
@@ -785,4 +794,30 @@ div[role=main] {
   float: right;
   width: 168px;
   margin-top: 5px;
+}
+
+#faq header nav {
+  overflow: hidden;
+}
+
+#faq header nav ul {
+  background: url("../img/faq/faq-ribbon.png") no-repeat scroll 0 30px transparent;
+  float: left;
+}
+
+#faq header nav ul li {
+  background: url("../img/faq/faq-icons.png") no-repeat scroll 0 0 transparent;
+  float: left;
+  text-align: center;
+  margin-right: 45px;
+}
+
+#faq header nav ul li a {
+  display: block;
+  width: 110px;
+  padding: 100px 0 0 0;
+}
+
+#faq #content > section:first-child {
+  border-top: none;
 }
