@@ -812,6 +812,18 @@ div[role=main] {
   margin-right: 45px;
 }
 
+#faq header nav #systems-nav {
+  background-position: -155px 0;
+}
+
+#faq header nav #obi-nav {
+  background-position: -297px 0;
+}
+
+#faq header nav #dml-nav {
+  background-position: -443px 0;
+}
+
 #faq header nav ul li a {
   display: block;
   width: 110px;
