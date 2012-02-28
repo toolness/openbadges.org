@@ -333,10 +333,29 @@ a.button:after {
 .partners {
   background: none;
   background-color: #000;
+  font-family: Georgia;
+  font-size: 14px;
 }
 
 .partners h2 {
   color: #87888b;
+}
+
+.disclaimers ul {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  margin-top: -0.5em;
+}
+
+.disclaimers ul li {
+  float: left;
+  border-left: 1px solid #656565;
+  margin: 0;
+  padding: 0 10px;
+}
+.disclaimers ul li:first-child {
+  border-left: none;
 }
 
 /* Main body */

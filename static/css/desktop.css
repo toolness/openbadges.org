@@ -13,7 +13,8 @@ Default template CSS - if you change anything here then updating will be a bit m
 .col img {
     width: 100%;
 }
-.external .col:first-child {
+.external .col:first-child,
+.partners .col:first-child {
     padding-left: 0;
 }
 /* Masthead */
@@ -43,4 +44,8 @@ Default template CSS - if you change anything here then updating will be a bit m
 .masthead nav {
   float: left;
   margin-top: 21px;
+}
+
+.partners .disclaimers ul {
+  margin: -0.5em 0 0 0;
 }
