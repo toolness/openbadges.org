@@ -693,6 +693,12 @@ a.top:before {
   margin: 20px 0;
 }
 
+#get-badge form input {
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 4px;
+}
+
 #badges-101 #final #get-badge {
   padding: 20px 0;
 }
