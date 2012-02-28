@@ -167,7 +167,7 @@ a:active {
   color: #2c8de6;
 }
 
-/* Sandstone buttons */
+/* Sandstone buttons (blue) */
 .button {
   float: left; 
   display: block; 
@@ -525,6 +525,7 @@ div[role=main] {
   background-position: -292px 0;
 }
 
+/* Badges 101 lesson & quiz slideshow */
 #badges-101 {
   display: none;
 }
@@ -541,6 +542,7 @@ div[role=main] {
 
 #slides .pagination {
   margin:26px auto 0;
+  padding: 0;
   width:100px;
 }
 
@@ -565,112 +567,6 @@ div[role=main] {
   background-position:0 -12px;
 }
 
-/* Participant (issuer/displayer/user) page styles */
-
-.participant h1,
-#faq h1,
-#faq h2 {
-  font: normal 65px/65px "MetaWebPro-Black";
-  margin-bottom: 0;
-  text-transform: uppercase;
-}
-
-#faq h2 {
-  font-size: 42px;
-}
-
-.participant h2,
-.participant h3,
-#faq h3 {
-  font-weight: normal;
-  font-style: italic;
-}
-
-.participant h2 {
-  font-size: 44px;
-  line-height: 44px;
-  margin: 0;
-}
-
-.participant h3,
-#faq h3 {
-  font-size: 24px;
-  line-height: 24px;
-}
-
-.participant li {
-  margin-bottom: 1em;
-}
-
-.participant a.top {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  color: #656565;
-}
-
-.participant a.top:before {
-  content: "⇧ ";
-}
-
-.participant #content > section ,
-#faq #content > section {
-  border-top: 2px dashed #f7b137;
-  padding: 30px 250px 30px 0;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.participant #content > section:first-child {
-  border-top: none;
-  font-size: 20px;
-  margin-top: -60px;
-  padding-top: 100px;
-}
-
-#issuer #content > section:first-child {
-  background: url("../img/participants/boris.png") no-repeat scroll right top transparent;
-  min-height: 200px; /* this + top/bottom padding = img height */
-}
-
-#issuer #hands {
-  width: 130px;
-  height: 122px;
-  background: url("../img/participants/boris_hand.png") no-repeat scroll 0 0 transparent;
-  position: absolute;
-  right: 54px;
-  top: 86px;
-}
-
-#user #content > section:first-child {
-  background: url("../img/participants/dorothy.png") no-repeat scroll right 30px transparent;
-  min-height: 285px; /* this + top/bottom padding = img height */
-}
-
-#user #hands {
-  width: 130px;
-  height: 129px;
-  background: url("../img/participants/dorothy_hands.png") no-repeat scroll 0 0 transparent;
-  position: absolute;
-  right: 53px;
-  top: -30px;
-}
-
-#displayer #content > section:first-child {
-  background: url("../img/participants/morty.png") no-repeat scroll right top transparent;
-  min-height: 234px; /* this + top/bottom padding = img height */
-  padding-right: 330px;
-}
-
-#displayer #hands {
-  width: 113px;
-  height: 119px;
-  background: url("../img/participants/morty_hands.png") no-repeat scroll 0 0 transparent;
-  position: absolute;
-  right: 203px;
-  top: 140px;
-}
-
 #badges-101 .button {
   width: 100px;
   height: 30px;
@@ -689,8 +585,14 @@ div[role=main] {
   margin: 0 auto;
 }
 
-#badges-101 .pagination {
-  padding: 0;
+#badges-101 #intro p {
+  margin: 35px 0;
+}
+
+#badges-101 #intro .tagline {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 0;
 }
 
 #badges-101 .options {
@@ -704,19 +606,14 @@ div[role=main] {
   background-color: #81BC2E; 
   /* IE10 */ 
   background-image: -ms-linear-gradient(top, #81BC2E 0%, #659C28 100%);
-
   /* Mozilla Firefox */ 
   background-image: -moz-linear-gradient(top, #81BC2E 0%, #659C28 100%);
-
   /* Opera */ 
   background-image: -o-linear-gradient(top, #81BC2E 0%, #659C28 100%);
-
   /* Webkit (Safari/Chrome 10) */ 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81BC2E), color-stop(1, #659C28));
-
   /* Webkit (Chrome 11+) */ 
   background-image: -webkit-linear-gradient(top, #81BC2E 0%, #659C28 100%);
-
   /* Proposed W3C Markup */ 
   background-image: linear-gradient(top, #81BC2E 0%, #659C28 100%);
 }
@@ -729,19 +626,14 @@ div[role=main] {
   background-color: #D63A2B; 
   /* IE10 */ 
   background-image: -ms-linear-gradient(top, #E55927 0%, #D63A2B 100%);
-
   /* Mozilla Firefox */ 
   background-image: -moz-linear-gradient(top, #E55927 0%, #D63A2B 100%);
-
   /* Opera */ 
   background-image: -o-linear-gradient(top, #E55927 0%, #D63A2B 100%);
-
   /* Webkit (Safari/Chrome 10) */ 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E55927), color-stop(1, #D63A2B));
-
   /* Webkit (Chrome 11+) */ 
   background-image: -webkit-linear-gradient(top, #E55927 0%, #D63A2B 100%);
-
   /* Proposed W3C Markup */ 
   background-image: linear-gradient(top, #E55927 0%, #D63A2B 100%);
 }
@@ -765,16 +657,6 @@ div[role=main] {
 
 #badges-101 #final #get-badge {
   padding: 20px 0;
-}
-
-#badges-101 #intro p {
-  margin: 35px 0;
-}
-
-#badges-101 #intro .tagline {
-  font-size: 14px;
-  font-style: italic;
-  margin-top: 0;
 }
 
 #badges-101 .slide {
@@ -859,40 +741,184 @@ div[role=main] {
   width: 168px;
 }
 
-#faq header nav {
+/* Participant (issuer/displayer/user) page styles */
+
+.participant h1 {
+  font: normal 65px/65px "MetaWebPro-Black";
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.participant h2,
+.participant h3 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.participant h2 {
+  font-size: 44px;
+  line-height: 44px;
+  margin: 0;
+}
+
+.participant h3 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.participant li {
+  margin-bottom: 1em;
+}
+
+.participant a.top {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: #656565;
+}
+
+.participant a.top:before {
+  content: "⇧ ";
+}
+
+.participant #content > section {
+  border-top: 2px dashed #f7b137;
+  padding: 30px 250px 30px 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.participant #content > section:first-child {
+  border-top: none;
+  font-size: 20px;
+  margin-top: -60px;
+  padding-top: 100px;
+}
+
+#issuer #content > section:first-child {
+  background: url("../img/participants/boris.png") no-repeat scroll right top transparent;
+  min-height: 200px; /* this + top/bottom padding = img height */
+}
+
+#issuer #hands {
+  width: 130px;
+  height: 122px;
+  background: url("../img/participants/boris_hand.png") no-repeat scroll 0 0 transparent;
+  position: absolute;
+  right: 54px;
+  top: 86px;
+}
+
+#user #content > section:first-child {
+  background: url("../img/participants/dorothy.png") no-repeat scroll right 30px transparent;
+  min-height: 285px; /* this + top/bottom padding = img height */
+}
+
+#user #hands {
+  width: 130px;
+  height: 129px;
+  background: url("../img/participants/dorothy_hands.png") no-repeat scroll 0 0 transparent;
+  position: absolute;
+  right: 53px;
+  top: -30px;
+}
+
+#displayer #content > section:first-child {
+  background: url("../img/participants/morty.png") no-repeat scroll right top transparent;
+  min-height: 234px; /* this + top/bottom padding = img height */
+  padding-right: 330px;
+}
+
+#displayer #hands {
+  width: 113px;
+  height: 119px;
+  background: url("../img/participants/morty_hands.png") no-repeat scroll 0 0 transparent;
+  position: absolute;
+  right: 203px;
+  top: 140px;
+}
+
+/* About/FAQ */
+
+#faq h1,
+#faq h2,
+#about h1,
+#about h2 {
+  font: normal 65px/65px "MetaWebPro-Black";
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+#faq h2,
+#about h2 {
+  font-size: 42px;
+}
+
+#faq h3,
+#about h3 {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+#faq #content > section,
+#about #content > section {
+  border-top: 2px dashed #f7b137;
+  padding: 30px 250px 30px 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#faq header nav,
+#about header nav {
   overflow: hidden;
 }
 
-#faq header nav ul {
-  background: url("../img/faq/faq-ribbon.png") no-repeat scroll 0 30px transparent;
+#faq header nav ul,
+#about header nav ul {
   float: left;
+  background: url("../img/faq/faq-ribbon.png") no-repeat scroll 0 30px transparent;
 }
 
-#faq header nav ul li {
-  background: url("../img/faq/faq-icons.png") no-repeat scroll 0 0 transparent;
+#faq header nav ul li,
+#about header nav ul li {
   float: left;
   text-align: center;
   margin-right: 45px;
 }
 
+#faq header nav ul li {
+  background: url("../img/faq/faq-icons.png") no-repeat scroll 0 0 transparent;
+}
 #faq header nav #systems-nav {
   background-position: -155px 0;
 }
-
 #faq header nav #obi-nav {
   background-position: -297px 0;
 }
-
 #faq header nav #dml-nav {
   background-position: -443px 0;
 }
 
-#faq header nav ul li a {
+#about header nav ul li {
+  background: url("../img/about-icons.png") no-repeat scroll 0 0 transparent;
+}
+#about header nav #how-it-works-nav {
+  background-position: -155px 0;
+}
+#about header nav #obi-nav {
+  background-position: -297px 0;
+}
+
+#faq header nav ul li a,
+#about header nav ul li a {
   display: block;
   width: 110px;
   padding: 100px 0 0 0;
 }
 
-#faq #content > section:first-child {
+#faq #content > section:first-child,
+#about #content > section:first-child {
   border-top: none;
 }
