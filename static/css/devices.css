@@ -692,3 +692,7 @@ div[role=main] {
   width: 110px;
   padding: 100px 0 0 0;
 }
+
+#faq #content > section:first-child {
+  border-top: none;
+}
