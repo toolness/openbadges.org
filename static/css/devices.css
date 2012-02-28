@@ -843,6 +843,16 @@ a.top:before {
   position: absolute;
   right: 54px;
   top: 86px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#issuer #hands:hover {
+  top: 83px;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 #user #content > section:first-child {
@@ -857,6 +867,18 @@ a.top:before {
   position: absolute;
   right: 53px;
   top: -30px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#user #hands:hover {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  transform: rotate(3deg);
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 #displayer #content > section:first-child {
@@ -872,6 +894,21 @@ a.top:before {
   position: absolute;
   right: 203px;
   top: 140px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  transform-origin: top center;
+}
+
+#displayer #hands:hover {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  transform: rotate(3deg);
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 /* About/FAQ */
