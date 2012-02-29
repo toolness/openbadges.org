@@ -49,3 +49,13 @@ Default template CSS - if you change anything here then updating will be a bit m
 .partners .disclaimers ul {
   margin: -0.5em 0 0 0;
 }
+
+/* style for the slides, probably the wrong place to put this */
+#badges-101 .lesson p.detail {
+    margin: 40px;
+}
+
+#badges-101 div.quiz h1 {
+    text-align: center;
+}
+/* end of chris' hamfisted css changes */
