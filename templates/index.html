@@ -3,9 +3,11 @@
 {% block page_id %}index{% endblock %}
 
 {% block head %}
+  <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css" media="screen" />
+{% endblock %}
+{% block bodyend %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="/scripts/jquery.fancybox.js"></script>
-  <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css" media="screen" />
   <script src="/scripts/slides.min.jquery.js"></script>
   <script src="/scripts/quickbadge.js"></script>
   <script src="http://beta.openbadges.org/issuer.js"></script>
