@@ -181,6 +181,7 @@ a:active {
   text-align: center; 
   color: white;
   border-bottom: none;
+  cursor: pointer;
 
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
