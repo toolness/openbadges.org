@@ -9,7 +9,8 @@ from distutils.dir_util import mkpath
 from wsgiref.simple_server import make_server
 from wsgiref.util import FileWrapper, shift_path_info
 
-from .localization import find_locales, to_gettext_locale, hyphenate
+from .localization import find_locales, to_gettext_locale, hyphenate, \
+                          unhyphenate
 
 mimetypes.add_type('application/x-font-woff', '.woff')
 
@@ -191,23 +192,23 @@ def export_site(build_dir, static_files_dir, template_dir, locale_dir,
     server = LocalizedTemplateServer(template_dir, locale_dir, locale_domain,
                                      template_vars)
     locales = find_locales(locale_dir, locale_domain, NULL_LOCALE)
-    for locale in locales:
-        nice_locale = locale.replace('_', '-')
-        print "processing localization '%s'" % nice_locale
+    for hyphenated_locale in locales:
+        print "processing localization '%s'" % hyphenated_locale
         env = {}
-        server.maybe_apply_translation(env, locale)
+        server.maybe_apply_translation(env, unhyphenate(hyphenated_locale))
         for dirpath, dirnames, filenames in os.walk(template_dir):
             files = [os.path.join(dirpath, filename)[len(template_dir)+1:]
                      for filename in filenames]
             for relpath in files:
-                print "  %s/%s" % (nice_locale, relpath)
+                print "  %s/%s" % (hyphenated_locale, relpath)
                 abspath = os.path.join(template_dir, relpath)
                 mimetype, contents = server.handle_file_as_jinja2_template(
                     env,
                     template_dir,
                     abspath
                     )
-                dest_path = os.path.join(build_dir, nice_locale, relpath)
+                dest_path = os.path.join(build_dir, hyphenated_locale,
+                                         relpath)
                 mkpath(os.path.dirname(dest_path))
                 open(dest_path, 'w').write(contents)
     print "done.\n\nyour new static site is located at:\n%s" % build_dir
