@@ -6,7 +6,7 @@ from babel.messages.frontend import CommandLineInterface
 
 class SimpleLocale(object):
     def __init__(self, name):
-        self.__locale = Locale(name)
+        self.__locale = Locale.parse(name)
         self.display_name = self.__locale.display_name
     
     def __str__(self):
@@ -14,6 +14,9 @@ class SimpleLocale(object):
 
 def hyphenate(name):
     return name.replace('_', '-')
+
+def unhyphenate(name):
+    return name.replace('-', '_')
 
 def to_gettext_locale(name):
     try:
