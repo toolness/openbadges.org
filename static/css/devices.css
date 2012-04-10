@@ -167,6 +167,10 @@ a:active {
   color: #2c8de6;
 }
 
+abbr[title] {
+  border: none;
+}
+
 /* Sandstone buttons (blue) */
 .button {
   float: left; 
