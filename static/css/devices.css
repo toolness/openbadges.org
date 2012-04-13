@@ -226,7 +226,8 @@ abbr[title] {
   transition-delay: 0s;
 }
 
-.button:hover {
+.button:hover,
+.button:focus{
   -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12 px 24px 2px rgba(255,255,255,0.2);
   -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 2px rgba(255,255,255,0.2);
   box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 2px rgba(255,255,255,0.2); 
@@ -552,7 +553,8 @@ a.top:before {
   -ms-transition: -ms-transform 0.5s;
 }
 
-.badge:hover {
+#issuer-user-displayer a:hover .badge,
+#issuer-user-displayer a:focus .badge{
   -moz-transform: scale(1.25) rotate(5deg);
   -webkit-transform: scale(1.25) rotate(5deg);
   -o-transform: scale(1.25) rotate(5deg);
