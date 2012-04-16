@@ -2,7 +2,7 @@ This is the content for the website at [openbadges.toolness.org][]. It will even
 
   [openbadges.toolness.org]: http://openbadges.toolness.org
   [openbadges.org]: http://openbadges.org
-
+   
 ## Prerequisites
 
 You need Python version 2.6 or higher. All other dependencies are
