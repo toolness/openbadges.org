@@ -500,7 +500,7 @@ a.top:before {
   line-height: 48px;
 }
 
-#issuer-user-displayer {
+#main-nav {
   border-top: 1px solid #cbac78;
   padding-bottom: 80px;
   padding-top: 20px;
@@ -508,7 +508,7 @@ a.top:before {
   overflow: hidden;
 }
 
-#issuer-user-displayer .col {
+#main-nav .col {
   text-align: center;
   border-left: 1px dashed #CBAC78;
   height: auto;
@@ -516,27 +516,27 @@ a.top:before {
   margin-top: 20px;
 }
 
-#issuer-user-displayer .col:first-child {
+#main-nav .col:first-child {
   border-left: none;
 }
 
-#issuer-user-displayer img {
+#main-nav img {
   width: auto;
   height: auto;
   margin: 0 auto;
 }
 
-#issuer-user-displayer h2 {
+#main-nav h2 {
   font: normal 35px "MetaWebPro-Black";
   text-transform: uppercase;
   margin: 5px 0;
 }
 
-#issuer-user-displayer p {
+#main-nav p {
   margin-top: 0px;
 }
 
-#issuer-user-displayer a {
+#main-nav a {
   color: #656565;
   text-decoration: none;
 }
@@ -553,8 +553,8 @@ a.top:before {
   -ms-transition: -ms-transform 0.5s;
 }
 
-#issuer-user-displayer a:hover .badge,
-#issuer-user-displayer a:focus .badge{
+#main-nav a:hover .badge,
+#main-nav a:focus .badge{
   -moz-transform: scale(1.25) rotate(5deg);
   -webkit-transform: scale(1.25) rotate(5deg);
   -o-transform: scale(1.25) rotate(5deg);
@@ -565,7 +565,7 @@ a.top:before {
   background-position: -12px 0;
 }
 
-#user_badge {
+#earner_badge {
   background-position: -146px 0;
 }
 
@@ -795,7 +795,7 @@ a.top:before {
   width: 168px;
 }
 
-/* Participant (issuer/displayer/user) page styles */
+/* Participant (issuer/displayer/earner) page styles */
 
 .participant h1 {
   font: normal 65px/65px "MetaWebPro-Black";
@@ -862,12 +862,12 @@ a.top:before {
   transition: all 0.1s ease-in;
 }
 
-#user #content > section:first-child {
+#earner #content > section:first-child {
   background: url("../img/participants/dorothy.png") no-repeat scroll right 30px transparent;
   min-height: 285px; /* this + top/bottom padding = img height */
 }
 
-#user #hands {
+#earner #hands {
   width: 130px;
   height: 129px;
   background: url("../img/participants/dorothy_hands.png") no-repeat scroll 0 0 transparent;
@@ -879,7 +879,7 @@ a.top:before {
   transition: all 0.2s ease-out;
 }
 
-#user #hands:hover {
+#earner #hands:hover {
   -webkit-transform: rotate(3deg);
   -moz-transform: rotate(3deg);
   transform: rotate(3deg);
