@@ -272,8 +272,14 @@ a.button:active {
   text-decoration: none;
 }
 
-a.button:after {
+a.button:after,
+#backpack:after {
   content: ' ❯'
+}
+
+#backpack {
+  line-height: 48px;
+  margin-left: 50px;
 }
 
 /**= Sections */
