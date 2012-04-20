@@ -178,6 +178,12 @@ Universal styles & classes
   abbr[title] {
     border: none;
   }
+  
+  h1 {
+    font: normal 65px/65px "MetaWebPro-Black";
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
 
   /* Sandstone buttons */
   .button {
@@ -833,12 +839,6 @@ Index styles & classes
 Participant (issuer/displayer/earner) common page styles
 */
 
-  .participant h1 {
-    font: normal 65px/65px "MetaWebPro-Black";
-    margin-bottom: 0;
-    text-transform: uppercase;
-  }
-
   .participant h2,
   .participant h3 {
     font-weight: normal;
@@ -978,18 +978,11 @@ Displayer page styles
 About/FAQ/Legal FAQ common page styles
 */
 
-  #faq h1,
   #faq h2,
-  #about h1,
   #about h2 {
-    font: normal 65px/65px "MetaWebPro-Black";
+    font: normal 42px/65px "MetaWebPro-Black";
     margin-bottom: 0;
     text-transform: uppercase;
-  }
-
-  #faq h2,
-  #about h2 {
-    font-size: 42px;
   }
 
   #faq h3,
