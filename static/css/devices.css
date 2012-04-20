@@ -305,6 +305,11 @@ Universal styles & classes
     content: ' ❯'
   }
 
+  /* some non-button links want the arrow too */
+  .right-arrow:after {
+    content: ' ❯'
+  }
+  
   /* OpenBadges logo */
   .logo {
     font-family: "Bebas-Neue";
@@ -435,99 +440,90 @@ Base template styles & classes
 Index styles & classes
 */
 
-  #backpack:after {
-    content: ' ❯'
-  }
-
-  #backpack {
-    line-height: 48px;
-    margin-left: 50px;
-  }
-
   #what-are-badges {
     font-style: italic;
     overflow: hidden;
   }
 
-  #what-are-badges .wrapper {
-    background: url("../img/index/gladis_body.png") no-repeat scroll right bottom transparent;
-    width: 90%;
-    height: 368px;
-    margin: 0 auto 0 0;
-    position: relative;
-  }
+    #what-are-badges .wrapper {
+      background: url("../img/index/gladis_body.png") no-repeat scroll right bottom transparent;
+      width: 90%;
+      height: 368px;
+      margin: 0 auto 0 0;
+      position: relative;
+    }
 
-  #dml-speech {
-    background: url("../img/index/speechbubble.png") no-repeat scroll right bottom transparent;
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 30px;
-    padding-top: 40px;
-    text-align: center;
-    font-style: normal;
-  }
+    #dml-speech {
+      background: url("../img/index/speechbubble.png") no-repeat scroll right bottom transparent;
+      width: 200px;
+      height: 150px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 30px;
+      padding-top: 40px;
+      text-align: center;
+      font-style: normal;
+    }
 
-  #what-are-badges #hands {
-    width: 120px;
-    height: 122px;
-    background: url("../img/index/gladis_hands.png") no-repeat scroll 0 0 transparent;
-    position: absolute;
-    right: 35px;
-    top: 130px;
-    -moz-animation-duration: 18s;
-    -moz-animation-name: wiggle;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-duration: 18s;
-    -webkit-animation-name: wiggle;
-    -webkit-animation-iteration-count: infinite;
-    -ms-animation-duration: 18s;
-    -ms-animation-name: wiggle;
-    -ms-animation-iteration-count: infinite;
-    animation-duration: 18s;
-    animation-name: wiggle;
-    animation-iteration-count: infinite;
-  }
+    #what-are-badges #hands {
+      width: 120px;
+      height: 122px;
+      background: url("../img/index/gladis_hands.png") no-repeat scroll 0 0 transparent;
+      position: absolute;
+      right: 35px;
+      top: 130px;
+      -moz-animation-duration: 18s;
+      -moz-animation-name: wiggle;
+      -moz-animation-iteration-count: infinite;
+      -webkit-animation-duration: 18s;
+      -webkit-animation-name: wiggle;
+      -webkit-animation-iteration-count: infinite;
+      -ms-animation-duration: 18s;
+      -ms-animation-name: wiggle;
+      -ms-animation-iteration-count: infinite;
+      animation-duration: 18s;
+      animation-name: wiggle;
+      animation-iteration-count: infinite;
+    }
 
-  @-moz-keyframes wiggle {
-    0% { -moz-transform: rotate(0deg); }
-    90% { -moz-transform: rotate(0deg); }
-    91% { -moz-transform: rotate(-4deg); }
-    93% { -moz-transform: rotate(4deg); }
-    94% { -moz-transform: rotate(0deg); }
-    100% { -moz-transform: rotate(0deg); }
-  }
+    @-moz-keyframes wiggle {
+      0% { -moz-transform: rotate(0deg); }
+      90% { -moz-transform: rotate(0deg); }
+      91% { -moz-transform: rotate(-4deg); }
+      93% { -moz-transform: rotate(4deg); }
+      94% { -moz-transform: rotate(0deg); }
+      100% { -moz-transform: rotate(0deg); }
+    }
  
-  @-webkit-keyframes wiggle {
-    0% { -webkit-transform: rotate(0deg); }
-    90% { -webkit-transform: rotate(0deg); }
-    91% { -webkit-transform: rotate(-4deg); }
-    93% { -webkit-transform: rotate(4deg); }
-    94% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(0deg); }
-  }
+    @-webkit-keyframes wiggle {
+      0% { -webkit-transform: rotate(0deg); }
+      90% { -webkit-transform: rotate(0deg); }
+      91% { -webkit-transform: rotate(-4deg); }
+      93% { -webkit-transform: rotate(4deg); }
+      94% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(0deg); }
+    }
  
-  @-ms-keyframes wiggle {
-    0% { -ms-transform: rotate(0deg); }
-    90% { -ms-transform: rotate(0deg); }
-    91% { -ms-transform: rotate(-4deg); }
-    93% { -ms-transform: rotate(4deg); }
-    94% { -ms-transform: rotate(0deg); }
-    100% { -ms-transform: rotate(0deg); }
-  }
+    @-ms-keyframes wiggle {
+      0% { -ms-transform: rotate(0deg); }
+      90% { -ms-transform: rotate(0deg); }
+      91% { -ms-transform: rotate(-4deg); }
+      93% { -ms-transform: rotate(4deg); }
+      94% { -ms-transform: rotate(0deg); }
+      100% { -ms-transform: rotate(0deg); }
+    }
 
-  @keyframes wiggle {
-    0% { transform: rotate(0deg); }
-    90% { transform: rotate(0deg); }
-    91% { transform: rotate(-4deg); }
-    93% { transform: rotate(4deg); }
-    94% { transform: rotate(0deg); }
-    100% { transform: rotate(0deg); }
-  }
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      90% { transform: rotate(0deg); }
+      91% { transform: rotate(-4deg); }
+      93% { transform: rotate(4deg); }
+      94% { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
   
-  #what-are-badges .wrapper h1 {
+  #what-are-badges h1 {
     font-family: inherit;
     font-style: italic;
     font-size: 42px;
@@ -538,7 +534,7 @@ Index styles & classes
     margin-bottom: 42px;
   }
 
-  #what-are-badges .wrapper h1 em {
+  #what-are-badges h1 em {
     font: normal 65px/42px "MetaWebPro-Black";
     text-transform: uppercase;
     display: block;
@@ -552,9 +548,14 @@ Index styles & classes
     margin-bottom: 50px;
   }
 
-  .button#get-started {
+  #get-started {
     font-size: 24px;
     line-height: 48px;
+  }
+  
+  #backpack {
+    line-height: 48px;
+    margin-left: 50px;
   }
 
   #main-nav {
