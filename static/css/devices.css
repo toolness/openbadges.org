@@ -185,13 +185,23 @@ Universal styles & classes
     text-transform: uppercase;
   }
   
+  /* visually reduced lead-in text */ 
+  h1 .reduce {
+    display: block;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 42px;
+    margin-bottom: -22px;
+    font-style: italic;
+    text-transform: lowercase;
+  }
+  
   h2 {
     font: normal 42px "MetaWebPro-Black";
     margin-bottom: 0;
     text-transform: uppercase; 
   }
   
-  /* h2 as "subheader" */
+  /* h2 as subheader */
   header h2 {
     font-family: inherit;
     font-weight: normal;
@@ -523,23 +533,6 @@ Index styles & classes
       100% { transform: rotate(0deg); }
     }
   
-  #what-are-badges h1 {
-    font-family: inherit;
-    font-style: italic;
-    font-size: 42px;
-    line-height: normal;
-    font-weight: normal;
-    text-transform: lowercase;
-    padding-top: 35px;
-    margin-bottom: 42px;
-  }
-
-  #what-are-badges h1 em {
-    font: normal 65px/42px "MetaWebPro-Black";
-    text-transform: uppercase;
-    display: block;
-  }
-
   #what-are-badges .wrapper p {
     font-style: italic;
     font-size: 20px;
