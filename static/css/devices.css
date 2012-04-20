@@ -150,863 +150,932 @@ div[role=main] {
 
 /**= And now time for your styles */
 
-/*
-Open Badges styles 
+/* 
+Open Badges Styles                     
+================================
+Webfonts               
+*/
+   
+  @font-face {
+    font-family: Bebas-Neue;
+    src: url(../fonts/BebasNeue-webfont.woff) format('woff');
+  }
+
+/* 
+Webfonts                         
+================================
+Universal styles & classes                 
 */
 
-@font-face {
-  font-family: Bebas-Neue;
-  src: url(../fonts/BebasNeue-webfont.woff) format('woff');
-}
+  a:link, 
+  a:visited,
+  a:focus,
+  a:hover,
+  a:active {
+    color: #2c8de6;
+  }
 
-a:link, 
-a:visited,
-a:focus,
-a:hover,
-a:active {
-  color: #2c8de6;
-}
+  abbr[title] {
+    border: none;
+  }
 
-abbr[title] {
-  border: none;
-}
+  /* Sandstone buttons */
+  .button {
+    float: left; 
+    display: block; 
+    text-decoration: none;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.25);
+    /*font: 14px/48px 'OpenSans-Reg', "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;*/
+    letter-spacing: -0.25px;
+    height: 48px; 
+    width: 252px; 
+    background-color: #1D94E4; 
+    text-align: center; 
+    color: white;
+    border-bottom: none;
+    cursor: pointer;
 
-/* Sandstone buttons (blue) */
-.button {
-  float: left; 
-  display: block; 
-  text-decoration: none;
-  text-shadow: 0px 1px 0px rgba(0,0,0,0.25);
-  /*font: 14px/48px 'OpenSans-Reg', "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;*/
-  letter-spacing: -0.25px;
-  height: 48px; 
-  width: 252px; 
-  background-color: #1D94E4; 
-  text-align: center; 
-  color: white;
-  border-bottom: none;
-  cursor: pointer;
+    -webkit-border-radius: 0.25em;
+    -moz-border-radius: 0.25em;
+    border-radius: 0.25em;
 
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  border-radius: 0.25em;
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.1); 
 
-  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.1); 
+    /* IE10 */ 
+    background-image: -ms-linear-gradient(top, #1D94E4 0%, #006DCA 100%);
 
-  /* IE10 */ 
-  background-image: -ms-linear-gradient(top, #1D94E4 0%, #006DCA 100%);
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #1D94E4 0%, #006DCA 100%);
 
-  /* Mozilla Firefox */ 
-  background-image: -moz-linear-gradient(top, #1D94E4 0%, #006DCA 100%);
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #1D94E4 0%, #006DCA 100%);
 
-  /* Opera */ 
-  background-image: -o-linear-gradient(top, #1D94E4 0%, #006DCA 100%);
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1D94E4), color-stop(1, #006DCA));
 
-  /* Webkit (Safari/Chrome 10) */ 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1D94E4), color-stop(1, #006DCA));
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #1D94E4 0%, #006DCA 100%);
 
-  /* Webkit (Chrome 11+) */ 
-  background-image: -webkit-linear-gradient(top, #1D94E4 0%, #006DCA 100%);
+    /* Proposed W3C Markup */ 
+    background-image: linear-gradient(top, #1D94E4 0%, #006DCA 100%);
 
-  /* Proposed W3C Markup */ 
-  background-image: linear-gradient(top, #1D94E4 0%, #006DCA 100%);
+    -webkit-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
+    -webkit-transition-duration: 0.25s;  
+    -webkit-transition-delay: 0s;
 
-  -webkit-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
-  -webkit-transition-duration: 0.25s;  
-  -webkit-transition-delay: 0s;
+    -moz-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
+    -moz-transition-duration: 0.25s;  
+    -moz-transition-delay: 0s;
 
-  -moz-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
-  -moz-transition-duration: 0.25s;  
-  -moz-transition-delay: 0s;
+    transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
+    transition-duration: 0.25s;  
+    transition-delay: 0s;
+  }
 
-  transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
-  transition-duration: 0.25s;  
-  transition-delay: 0s;
-}
+  .button:hover,
+  .button:focus{
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12 px 24px 2px rgba(255,255,255,0.2);
+    -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 2px rgba(255,255,255,0.2);
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 2px rgba(255,255,255,0.2); 
 
-.button:hover,
-.button:focus{
-  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12 px 24px 2px rgba(255,255,255,0.2);
-  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 2px rgba(255,255,255,0.2);
-  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 2px rgba(255,255,255,0.2); 
+    -webkit-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
+    -webkit-transition-duration: 0.25s;  
+    -webkit-transition-delay: 0s;
 
-  -webkit-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
-  -webkit-transition-duration: 0.25s;  
-  -webkit-transition-delay: 0s;
+    -moz-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
+    -moz-transition-duration: 0.25s;  
+    -moz-transition-delay: 0s;
 
-  -moz-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
-  -moz-transition-duration: 0.25s;  
-  -moz-transition-delay: 0s;
+    transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
+    transition-duration: 0.25s;  
+    transition-delay: 0s;
+  }
 
-  transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
-  transition-duration: 0.25s;  
-  transition-delay: 0s;
-}
+  .button:active {
+    -webkit-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 6px rgba(0,0,0,0.2), inset 0px 0px 2px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 6px rgba(0,0,0,0.2), inset 0px 0px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 6px rgba(0,0,0,0.2), inset 0px 0px 2px 2px rgba(0,0,0,0.2); 
 
-.button:active {
-  -webkit-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 6px rgba(0,0,0,0.2), inset 0px 0px 2px 2px rgba(0,0,0,0.2);
-  -moz-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 6px rgba(0,0,0,0.2), inset 0px 0px 2px 2px rgba(0,0,0,0.2);
-  box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 6px rgba(0,0,0,0.2), inset 0px 0px 2px 2px rgba(0,0,0,0.2); 
+    -webkit-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
+    -webkit-transition-duration: 0.25s;  
+    -webkit-transition-delay: 0s;
 
-  -webkit-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
-  -webkit-transition-duration: 0.25s;  
-  -webkit-transition-delay: 0s;
+    -moz-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
+    -moz-transition-duration: 0.25s;  
+    -moz-transition-delay: 0s;
 
-  -moz-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
-  -moz-transition-duration: 0.25s;  
-  -moz-transition-delay: 0s;
+    transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
+    transition-duration: 0.25s;  
+    transition-delay: 0s;
+  }
 
-  transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;  
-  transition-duration: 0.25s;  
-  transition-delay: 0s;
-}
+  .button:link, 
+  .button:visited,
+  .button:focus,
+  .button:hover,
+  .button:active {
+    color: #fff;
+    text-decoration: none;
+  }
 
-a.button:link, 
-a.button:visited,
-a.button:focus,
-a.button:hover,
-a.button:active {
-  color: #fff;
-  text-decoration: none;
-}
+  .button:after {
+    content: ' ❯'
+  }
 
-a.button:after,
-#backpack:after {
-  content: ' ❯'
-}
+  /* OpenBadges logo */
+  .logo {
+    font-family: "Bebas-Neue";
+    font-size: 54px;
+    line-height: 48px;
+    margin: 6px 75px 0 0;
+  }
 
-#backpack {
-  line-height: 48px;
-  margin-left: 50px;
-}
+  .logo a {
+    color: #444;
+    text-decoration: none;
+  }
 
-/**= Sections */
-/* Masthead */
-.masthead ul a:link,
-.masthead ul a:visited,
-.masthead ul a:focus,
-.masthead ul a:hover,
-.masthead ul a:active {
-  color: #333;
-}
-
-.masthead {
-  background: none;
-}
-
-.masthead ul a {
-  text-transform: uppercase;
-}
-
-#logo {
-  font-family: "Bebas-Neue";
-  font-size: 54px;
-  line-height: 48px;
-  float: left;
-  margin: 6px 75px 0 0;
-}
-
-#logo a {
-  color: #444;
-  text-decoration: none;
-}
-
-#logo a img {
-  display: block;
-}
-
-/* External footer */
-.external {
-  background: none;
-  background-color: #323538;
-}
-
-.external h2,
-.external p,
-.external li {
-  color: #9c9c9c;
-}
-
-.external h3 {
-  font-size: 14px;
-  color: #9c9c9c;
-  font-style: italic;
-  font-weight: normal;
-  margin: -1em 0 14px 0;
-}
-
-.external li {
-  border-top: 1px solid #656565;
-}
-
-/* Partners footer */
-.partners {
-  background: none;
-  background-color: #000;
-  font-family: Georgia;
-  font-size: 14px;
-}
-
-.partners h2,
-.partners a {
-  color: #87888b;
-}
-
-.disclaimers ul {
-  position: absolute;
-  top: 50%;
-  margin: 0;
-  margin-top: -0.5em;
-}
-
-.disclaimers ul li {
-  float: left;
-  border-left: 1px solid #656565;
-  margin: 0;
-  padding: 0 10px;
-}
-.disclaimers ul li:first-child {
-  border-left: 0;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-/* Main body */
-#header-and-content {
-  background: url("../img/mozorg-gradient.png") repeat-x scroll center top #F5F1E8;
-}
-
-div[role=main] {
-  margin: 0.625em 0 0 0;
-  background: none;
-  font: normal 16px Georgia,"Times New Roman",Times,serif;
-  color: #656565;
-}
-
-a.top {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  color: #656565;
-}
-
-a.top:before {
-  content: "⇧ ";
-}
-/**= Pages */
-/* Landing page styles */
-
-#what-are-badges {
-  font-style: italic;
-  overflow: hidden;
-}
-
-#what-are-badges .wrapper {
-  background: url("../img/index/gladis_body.png") no-repeat scroll right bottom transparent;
-  width: 90%;
-  height: 368px;
-  margin: 0 auto 0 0;
-  position: relative;
-}
-
-#dml-speech {
-  background: url("../img/index/speechbubble.png") no-repeat scroll right bottom transparent;
-  width: 200px;
-  height: 150px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 30px;
-  padding-top: 40px;
-  text-align: center;
-  font-style: normal;
-}
-
-#what-are-badges #hands {
-  width: 120px;
-  height: 122px;
-  background: url("../img/index/gladis_hands.png") no-repeat scroll 0 0 transparent;
-  position: absolute;
-  right: 35px;
-  top: 130px;
-  -moz-animation-duration: 18s;
-  -moz-animation-name: wiggle;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-duration: 18s;
-  -webkit-animation-name: wiggle;
-  -webkit-animation-iteration-count: infinite;
-  -ms-animation-duration: 18s;
-  -ms-animation-name: wiggle;
-  -ms-animation-iteration-count: infinite;
-  animation-duration: 18s;
-  animation-name: wiggle;
-  animation-iteration-count: infinite;
-}
-
-@-moz-keyframes wiggle {
-  0% { -moz-transform: rotate(0deg); }
-  90% { -moz-transform: rotate(0deg); }
-  91% { -moz-transform: rotate(-4deg); }
-  93% { -moz-transform: rotate(4deg); }
-  94% { -moz-transform: rotate(0deg); }
-  100% { -moz-transform: rotate(0deg); }
-}
- 
-@-webkit-keyframes wiggle {
-  0% { -webkit-transform: rotate(0deg); }
-  90% { -webkit-transform: rotate(0deg); }
-  91% { -webkit-transform: rotate(-4deg); }
-  93% { -webkit-transform: rotate(4deg); }
-  94% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(0deg); }
-}
- 
-@-ms-keyframes wiggle {
-  0% { -ms-transform: rotate(0deg); }
-  90% { -ms-transform: rotate(0deg); }
-  91% { -ms-transform: rotate(-4deg); }
-  93% { -ms-transform: rotate(4deg); }
-  94% { -ms-transform: rotate(0deg); }
-  100% { -ms-transform: rotate(0deg); }
-}
-
-@keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  90% { transform: rotate(0deg); }
-  91% { transform: rotate(-4deg); }
-  93% { transform: rotate(4deg); }
-  94% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
-}
+  .logo a img {
+    display: block;
+  }
   
-#what-are-badges .wrapper h1 {
-  padding-top: 35px;
-  font-size: 42px;
-  font-weight: normal;
-  text-transform: lowercase;
-}
-
-#what-are-badges .wrapper h1 em {
-  font: normal 65px/42px "MetaWebPro-Black";
-  text-transform: uppercase;
-  display: block;
-}
-
-#what-are-badges .wrapper p {
-  font-style: italic;
-  font-size: 20px;
-  padding-right: 251px;
-  max-width: 600px;
-  margin-bottom: 50px;
-}
-
-.button#get-started {
-  font-size: 24px;
-  line-height: 48px;
-}
-
-#main-nav {
-  border-top: 1px solid #cbac78;
-  padding-bottom: 80px;
-  padding-top: 20px;
-  margin-top: 40px;
-  overflow: hidden;
-}
-
-#main-nav .col {
-  text-align: center;
-  border-left: 1px dashed #CBAC78;
-  height: auto;
-  overflow: visible;
-  margin-top: 20px;
-}
-
-#main-nav .col:first-child {
-  border-left: none;
-}
-
-#main-nav img {
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-}
-
-#main-nav h2 {
-  font: normal 35px "MetaWebPro-Black";
-  text-transform: uppercase;
-  margin: 5px 0;
-}
-
-#main-nav p {
-  margin-top: 0px;
-}
-
-#main-nav a {
-  color: #656565;
-  text-decoration: none;
-}
-
-.badge {
-  display: block;
-  width: 125px;
-  height: 150px;
-  margin: 0 auto;
-  background: url("../img/index/goldbadges.png") no-repeat scroll 0 0 transparent;
-  -moz-transition: -moz-transform 0.5s;
-  -webkit-transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  -ms-transition: -ms-transform 0.5s;
-}
-
-#main-nav a:hover .badge,
-#main-nav a:focus .badge{
-  -moz-transform: scale(1.25) rotate(5deg);
-  -webkit-transform: scale(1.25) rotate(5deg);
-  -o-transform: scale(1.25) rotate(5deg);
-  -ms-transform: scale(1.25) rotate(5deg);
-}
-
-#issuer_badge {
-  background-position: -12px 0;
-}
-
-#earner_badge {
-  background-position: -146px 0;
-}
-
-#displayer_badge {
-  background-position: -292px 0;
-}
-
-/* Badges 101 lesson & quiz slideshow */
-#badges-101 {
-  display: none;
-}
-
-.slides_container {            
-  width:640px;
-  height:420px;                
-}
-.slides_container div {
-  width:640px;
-  height:420px;
-  display:block;
-}
-
-#slides .pagination {
-  margin:26px auto 0;
-  padding: 0;
-  width:100px;
-}
-
-#slides .pagination li {
-  float:left;
-  margin:0 1px;
-  list-style:none;
-}
-
-#slides .pagination li a {
-  display:block;
-  width:12px;
-  height:0;
-  padding-top:12px;
-  background-image:url(../img/slides/pagination.png);
-  background-position:0 0;
-  float:left;
-  overflow:hidden;
-}
-
-#slides .pagination li.current a {
-  background-position:0 -12px;
-}
-
-#badges-101 .button {
-  width: 100px;
-  height: 30px;
-  line-height: 30px;
-}
-
-#badges-101 .next {
-  position: absolute;
-  bottom: 10px; 
-  right: 20px;
-}
-
-#badges-101 #intro .next {
-  float: none;
-  position: static;
-  margin: 0 auto;
-}
-
-#badges-101 #intro p {
-  margin: 30px 0;
-}
-
-#badges-101 #intro .tagline {
-  font-size: 14px;
-  font-style: italic;
-  margin-top: 4px;
-}
-
-#badges-101 .options {
-  width: 75%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-#badges-101 .true {
-  float: left;
-  background-color: #81BC2E; 
-  /* IE10 */ 
-  background-image: -ms-linear-gradient(top, #81BC2E 0%, #659C28 100%);
-  /* Mozilla Firefox */ 
-  background-image: -moz-linear-gradient(top, #81BC2E 0%, #659C28 100%);
-  /* Opera */ 
-  background-image: -o-linear-gradient(top, #81BC2E 0%, #659C28 100%);
-  /* Webkit (Safari/Chrome 10) */ 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81BC2E), color-stop(1, #659C28));
-  /* Webkit (Chrome 11+) */ 
-  background-image: -webkit-linear-gradient(top, #81BC2E 0%, #659C28 100%);
-  /* Proposed W3C Markup */ 
-  background-image: linear-gradient(top, #81BC2E 0%, #659C28 100%);
-}
-#badges-101 .true:after {
-  content: "";
-}
-
-#badges-101 .false {
-  float: right;
-  background-color: #D63A2B; 
-  /* IE10 */ 
-  background-image: -ms-linear-gradient(top, #E55927 0%, #D63A2B 100%);
-  /* Mozilla Firefox */ 
-  background-image: -moz-linear-gradient(top, #E55927 0%, #D63A2B 100%);
-  /* Opera */ 
-  background-image: -o-linear-gradient(top, #E55927 0%, #D63A2B 100%);
-  /* Webkit (Safari/Chrome 10) */ 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E55927), color-stop(1, #D63A2B));
-  /* Webkit (Chrome 11+) */ 
-  background-image: -webkit-linear-gradient(top, #E55927 0%, #D63A2B 100%);
-  /* Proposed W3C Markup */ 
-  background-image: linear-gradient(top, #E55927 0%, #D63A2B 100%);
-}
-#badges-101 .false:after {
-  content: "";
-}
-
-#badges-101 #intro,
-#badges-101 #final {
-  text-align: center;
-}
-
-#badges-101 #final p {
-  font-style: italic;
-}
-
-#badges-101 #final #get-badge .instructions {
-  font-style: normal;
-  margin: 20px 0;
-}
-
-#get-badge form input {
-  border: 1px solid gray;
-  border-radius: 4px;
-  padding: 4px;
-}
-
-#badges-101 #final #get-badge {
-  padding: 20px 0;
-}
-
-#badges-101 .slide {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 30px;
-  position: relative;
-}
-
-#badges-101 .lesson p {
-  font-size: 18px;
-  margin: 80px;
-}
-
-#badges-101 .quiz {
-  font-size: 18px;
-}
-
-#badges-101 #quiz-intro {
-  font-style: italic;
-  width: 100%;
-  text-align: center;
-}
-
-#badges-101 .question {
-  text-align: center;
-}
-
-#badges-101 .discussion {
-  margin-top: 50px;
-}
-
-#badges-101 .discussion .answer {
-  font-style: italic;
-}
-
-#badges-101 h1 {
-  font: normal 60px/56px "MetaWebPro-Black";
-  text-transform: uppercase;
-  display: block;
-  margin: 0;
-}
-
-#badges-101 #intro h1 {
-  background: url('/img/index/101badge.png') no-repeat scroll center top transparent;
-  padding-top: 145px;
-}
-
-#badges-101 #final h1 {
-  margin-top: -20px;
-}
-
-#badges-101 #final p {
-  margin: 10px 0 2px 0;
-}
-
-#badges-101 #final img {
-  margin-top: -35px;
-}
-
-#badges-101 #final nav {
-  width: 80%;
-  margin: 0 auto;
-}
-
-#badges-101 #final .backpack {
-  background: url('/img/index/backpack.png') no-repeat scroll center top transparent;
-  display: block;
-  padding-top: 90px;
-  margin-top: 30px;
-  float: left;
-  width: 168px;
-}
-
-#badges-101 #final #navigator {
-  background: url('/img/index/navigatorbadge.png') no-repeat scroll center top transparent;
-  display: block;
-  padding-top: 90px;
-  margin-top: 30px;
-  float: right;
-  width: 168px;
-}
-
-/* Participant (issuer/displayer/earner) page styles */
-
-.participant h1 {
-  font: normal 65px/65px "MetaWebPro-Black";
-  margin-bottom: 0;
-  text-transform: uppercase;
-}
-
-.participant h2,
-.participant h3 {
-  font-weight: normal;
-  font-style: italic;
-}
-
-.participant h2 {
-  font-size: 44px;
-  line-height: 44px;
-  margin: 0;
-}
-
-.participant h3 {
-  font-size: 24px;
-  line-height: 24px;
-}
-
-.participant li {
-  margin-bottom: 1em;
-}
-
-.participant #content > section {
-  border-top: 2px dashed #f7b137;
-  padding: 30px 250px 30px 0;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.participant #content > section:first-child {
-  border-top: none;
-  font-size: 20px;
-  margin-top: -60px;
-  padding-top: 100px;
-}
-
-#issuer #content > section:first-child {
-  background: url("../img/participants/boris.png") no-repeat scroll right top transparent;
-  min-height: 200px; /* this + top/bottom padding = img height */
-}
-
-#issuer #hands {
-  width: 130px;
-  height: 122px;
-  background: url("../img/participants/boris_hand.png") no-repeat scroll 0 0 transparent;
-  position: absolute;
-  right: 54px;
-  top: 86px;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-#issuer #hands:hover {
-  top: 83px;
-  -webkit-transition: all 0.1s ease-in;
-  -moz-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
-}
-
-#earner #content > section:first-child {
-  background: url("../img/participants/dorothy.png") no-repeat scroll right 30px transparent;
-  min-height: 285px; /* this + top/bottom padding = img height */
-}
-
-#earner #hands {
-  width: 130px;
-  height: 129px;
-  background: url("../img/participants/dorothy_hands.png") no-repeat scroll 0 0 transparent;
-  position: absolute;
-  right: 53px;
-  top: -30px;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-#earner #hands:hover {
-  -webkit-transform: rotate(3deg);
-  -moz-transform: rotate(3deg);
-  transform: rotate(3deg);
-  -webkit-transition: all 0.1s ease-in;
-  -moz-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
-}
-
-#displayer #content > section:first-child {
-  background: url("../img/participants/morty.png") no-repeat scroll right top transparent;
-  min-height: 234px; /* this + top/bottom padding = img height */
-  padding-right: 330px;
-}
-
-#displayer #hands {
-  width: 113px;
-  height: 119px;
-  background: url("../img/participants/morty_hands.png") no-repeat scroll 0 0 transparent;
-  position: absolute;
-  right: 203px;
-  top: 140px;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transform-origin: top center;
-  -moz-transform-origin: top center;
-  transform-origin: top center;
-}
-
-#displayer #hands:hover {
-  -webkit-transform: rotate(3deg);
-  -moz-transform: rotate(3deg);
-  transform: rotate(3deg);
-  -webkit-transition: all 0.1s ease-in;
-  -moz-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
-}
-
-/* About/FAQ */
-
-#faq h1,
-#faq h2,
-#about h1,
-#about h2 {
-  font: normal 65px/65px "MetaWebPro-Black";
-  margin-bottom: 0;
-  text-transform: uppercase;
-}
-
-#faq h2,
-#about h2 {
-  font-size: 42px;
-}
-
-#faq h3,
-#about h3 {
-  font-weight: normal;
-  font-style: italic;
-  font-size: 24px;
-  line-height: 24px;
-}
-
-#faq #content > section,
-#about #content > section {
-  border-top: 2px dashed #f7b137;
-  padding: 30px 250px 30px 0;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-#faq header nav,
-#about header nav {
-  overflow: hidden;
-}
-
-#faq header nav ul,
-#about header nav ul {
-  float: left;
-  background: url("../img/faq/faq-ribbon.png") no-repeat scroll 0 30px transparent;
-}
-
-#faq header nav ul li,
-#about header nav ul li {
-  float: left;
-  text-align: center;
-  margin-right: 45px;
-}
-
-#faq header nav ul li {
-  background: url("../img/faq/faq-icons.png") no-repeat scroll 0 0 transparent;
-}
-#faq header nav #systems-nav {
-  background-position: -155px 0;
-}
-#faq header nav #obi-nav {
-  background-position: -297px 0;
-}
-#faq header nav #dml-nav {
-  background-position: -443px 0;
-}
-
-#about header nav ul li {
-  background: url("../img/about-icons.png") no-repeat scroll 0 0 transparent;
-}
-#about header nav #how-it-works-nav {
-  background-position: -155px 0;
-}
-#about header nav #obi-nav {
-  background-position: -297px 0;
-}
-
-#faq header nav ul li a,
-#about header nav ul li a {
-  display: block;
-  width: 110px;
-  padding: 100px 0 0 0;
-}
-
-#faq #content > section:first-child,
-#about #content > section:first-child {
-  border-top: none;
-}
+  /* Return to top links */
+  a.top {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #656565;
+  }
+
+  a.top:before {
+    content: "⇧ ";
+  }
+
+/* 
+Universal styles & classes              
+================================
+Base template styles & classes
+*/
+
+  #header-and-content {
+    background: url("../img/mozorg-gradient.png") repeat-x scroll center top #F5F1E8;
+  }
+  
+    /* Page header */
+    .masthead {
+      background: none;
+    }
+
+      .masthead ul a {
+        text-transform: uppercase;
+      }
+
+      .masthead ul a:link,
+      .masthead ul a:visited,
+      .masthead ul a:focus,
+      .masthead ul a:hover,
+      .masthead ul a:active {
+        color: #333;
+      }
+
+      .masthead .logo {
+        float: left;
+      }
+      
+    /* Page content */  
+    div[role=main] {
+      margin: 0.625em 0 0 0;
+      background: none;
+      font: normal 16px Georgia,"Times New Roman",Times,serif;
+      color: #656565;
+    }
+
+    /* Externals footer */
+    .external {
+      background: none;
+      background-color: #323538;
+    }
+
+      .external h2,
+      .external p,
+      .external li {
+        color: #9c9c9c;
+      }
+
+      .external h3 {
+        font-size: 14px;
+        color: #9c9c9c;
+        font-style: italic;
+        font-weight: normal;
+        margin: -1em 0 14px 0;
+      }
+
+      .external li {
+        border-top: 1px solid #656565;
+      }
+
+    /* Partners footer */
+    .partners {
+      background: none;
+      background-color: #000;
+      font-family: Georgia;
+      font-size: 14px;
+    }
+
+      .partners h2,
+      .partners a {
+        color: #87888b;
+      }
+
+      .disclaimers ul {
+        position: absolute;
+        top: 50%;
+        margin: 0;
+        margin-top: -0.5em;
+      }
+
+      .disclaimers ul li {
+        float: left;
+        border-left: 1px solid #656565;
+        margin: 0;
+        padding: 0 10px;
+      }
+      .disclaimers ul li:first-child {
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+/* 
+Base template styles & classes
+================================
+Index styles & classes
+*/
+
+  #backpack:after {
+    content: ' ❯'
+  }
+
+  #backpack {
+    line-height: 48px;
+    margin-left: 50px;
+  }
+
+  #what-are-badges {
+    font-style: italic;
+    overflow: hidden;
+  }
+
+  #what-are-badges .wrapper {
+    background: url("../img/index/gladis_body.png") no-repeat scroll right bottom transparent;
+    width: 90%;
+    height: 368px;
+    margin: 0 auto 0 0;
+    position: relative;
+  }
+
+  #dml-speech {
+    background: url("../img/index/speechbubble.png") no-repeat scroll right bottom transparent;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 30px;
+    padding-top: 40px;
+    text-align: center;
+    font-style: normal;
+  }
+
+  #what-are-badges #hands {
+    width: 120px;
+    height: 122px;
+    background: url("../img/index/gladis_hands.png") no-repeat scroll 0 0 transparent;
+    position: absolute;
+    right: 35px;
+    top: 130px;
+    -moz-animation-duration: 18s;
+    -moz-animation-name: wiggle;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-duration: 18s;
+    -webkit-animation-name: wiggle;
+    -webkit-animation-iteration-count: infinite;
+    -ms-animation-duration: 18s;
+    -ms-animation-name: wiggle;
+    -ms-animation-iteration-count: infinite;
+    animation-duration: 18s;
+    animation-name: wiggle;
+    animation-iteration-count: infinite;
+  }
+
+  @-moz-keyframes wiggle {
+    0% { -moz-transform: rotate(0deg); }
+    90% { -moz-transform: rotate(0deg); }
+    91% { -moz-transform: rotate(-4deg); }
+    93% { -moz-transform: rotate(4deg); }
+    94% { -moz-transform: rotate(0deg); }
+    100% { -moz-transform: rotate(0deg); }
+  }
+ 
+  @-webkit-keyframes wiggle {
+    0% { -webkit-transform: rotate(0deg); }
+    90% { -webkit-transform: rotate(0deg); }
+    91% { -webkit-transform: rotate(-4deg); }
+    93% { -webkit-transform: rotate(4deg); }
+    94% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(0deg); }
+  }
+ 
+  @-ms-keyframes wiggle {
+    0% { -ms-transform: rotate(0deg); }
+    90% { -ms-transform: rotate(0deg); }
+    91% { -ms-transform: rotate(-4deg); }
+    93% { -ms-transform: rotate(4deg); }
+    94% { -ms-transform: rotate(0deg); }
+    100% { -ms-transform: rotate(0deg); }
+  }
+
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    90% { transform: rotate(0deg); }
+    91% { transform: rotate(-4deg); }
+    93% { transform: rotate(4deg); }
+    94% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  #what-are-badges .wrapper h1 {
+    padding-top: 35px;
+    font-size: 42px;
+    font-weight: normal;
+    text-transform: lowercase;
+  }
+
+  #what-are-badges .wrapper h1 em {
+    font: normal 65px/42px "MetaWebPro-Black";
+    text-transform: uppercase;
+    display: block;
+  }
+
+  #what-are-badges .wrapper p {
+    font-style: italic;
+    font-size: 20px;
+    padding-right: 251px;
+    max-width: 600px;
+    margin-bottom: 50px;
+  }
+
+  .button#get-started {
+    font-size: 24px;
+    line-height: 48px;
+  }
+
+  #main-nav {
+    border-top: 1px solid #cbac78;
+    padding-bottom: 80px;
+    padding-top: 20px;
+    margin-top: 40px;
+    overflow: hidden;
+  }
+
+  #main-nav .col {
+    text-align: center;
+    border-left: 1px dashed #CBAC78;
+    height: auto;
+    overflow: visible;
+    margin-top: 20px;
+  }
+
+  #main-nav .col:first-child {
+    border-left: none;
+  }
+
+  #main-nav img {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #main-nav h2 {
+    font: normal 35px "MetaWebPro-Black";
+    text-transform: uppercase;
+    margin: 5px 0;
+  }
+
+  #main-nav p {
+    margin-top: 0px;
+  }
+
+  #main-nav a {
+    color: #656565;
+    text-decoration: none;
+  }
+
+  .badge {
+    display: block;
+    width: 125px;
+    height: 150px;
+    margin: 0 auto;
+    background: url("../img/index/goldbadges.png") no-repeat scroll 0 0 transparent;
+    -moz-transition: -moz-transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    -ms-transition: -ms-transform 0.5s;
+  }
+
+  #main-nav a:hover .badge,
+  #main-nav a:focus .badge{
+    -moz-transform: scale(1.25) rotate(5deg);
+    -webkit-transform: scale(1.25) rotate(5deg);
+    -o-transform: scale(1.25) rotate(5deg);
+    -ms-transform: scale(1.25) rotate(5deg);
+  }
+
+  #issuer_badge {
+    background-position: -12px 0;
+  }
+
+  #earner_badge {
+    background-position: -146px 0;
+  }
+
+  #displayer_badge {
+    background-position: -292px 0;
+  }
+
+  /* Badges 101 lesson & quiz slideshow */
+  #badges-101 {
+    display: none;
+  }
+
+  .slides_container {            
+    width:640px;
+    height:420px;                
+  }
+  .slides_container div {
+    width:640px;
+    height:420px;
+    display:block;
+  }
+
+  #slides .pagination {
+    margin:26px auto 0;
+    padding: 0;
+    width:100px;
+  }
+
+  #slides .pagination li {
+    float:left;
+    margin:0 1px;
+    list-style:none;
+  }
+
+  #slides .pagination li a {
+    display:block;
+    width:12px;
+    height:0;
+    padding-top:12px;
+    background-image:url(../img/slides/pagination.png);
+    background-position:0 0;
+    float:left;
+    overflow:hidden;
+  }
+
+  #slides .pagination li.current a {
+    background-position:0 -12px;
+  }
+
+  #badges-101 .button {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  #badges-101 .next {
+    position: absolute;
+    bottom: 10px; 
+    right: 20px;
+  }
+
+  #badges-101 #intro .next {
+    float: none;
+    position: static;
+    margin: 0 auto;
+  }
+
+  #badges-101 #intro p {
+    margin: 30px 0;
+  }
+
+  #badges-101 #intro .tagline {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  #badges-101 .options {
+    width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  #badges-101 .true {
+    float: left;
+    background-color: #81BC2E; 
+    /* IE10 */ 
+    background-image: -ms-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81BC2E), color-stop(1, #659C28));
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+    /* Proposed W3C Markup */ 
+    background-image: linear-gradient(top, #81BC2E 0%, #659C28 100%);
+  }
+  #badges-101 .true:after {
+    content: "";
+  }
+
+  #badges-101 .false {
+    float: right;
+    background-color: #D63A2B; 
+    /* IE10 */ 
+    background-image: -ms-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E55927), color-stop(1, #D63A2B));
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+    /* Proposed W3C Markup */ 
+    background-image: linear-gradient(top, #E55927 0%, #D63A2B 100%);
+  }
+  #badges-101 .false:after {
+    content: "";
+  }
+
+  #badges-101 #intro,
+  #badges-101 #final {
+    text-align: center;
+  }
+
+  #badges-101 #final p {
+    font-style: italic;
+  }
+
+  #badges-101 #final #get-badge .instructions {
+    font-style: normal;
+    margin: 20px 0;
+  }
+
+  #get-badge form input {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 4px;
+  }
+
+  #badges-101 #final #get-badge {
+    padding: 20px 0;
+  }
+
+  #badges-101 .slide {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 30px;
+    position: relative;
+  }
+
+  #badges-101 .lesson p {
+    font-size: 18px;
+    margin: 80px;
+  }
+
+  #badges-101 .quiz {
+    font-size: 18px;
+  }
+
+  #badges-101 #quiz-intro {
+    font-style: italic;
+    width: 100%;
+    text-align: center;
+  }
+
+  #badges-101 .question {
+    text-align: center;
+  }
+
+  #badges-101 .discussion {
+    margin-top: 50px;
+  }
+
+  #badges-101 .discussion .answer {
+    font-style: italic;
+  }
+
+  #badges-101 h1 {
+    font: normal 60px/56px "MetaWebPro-Black";
+    text-transform: uppercase;
+    display: block;
+    margin: 0;
+  }
+
+  #badges-101 #intro h1 {
+    background: url('/img/index/101badge.png') no-repeat scroll center top transparent;
+    padding-top: 145px;
+  }
+
+  #badges-101 #final h1 {
+    margin-top: -20px;
+  }
+
+  #badges-101 #final p {
+    margin: 10px 0 2px 0;
+  }
+
+  #badges-101 #final img {
+    margin-top: -35px;
+  }
+
+  #badges-101 #final nav {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #badges-101 #final .backpack {
+    background: url('/img/index/backpack.png') no-repeat scroll center top transparent;
+    display: block;
+    padding-top: 90px;
+    margin-top: 30px;
+    float: left;
+    width: 168px;
+  }
+
+  #badges-101 #final #navigator {
+    background: url('/img/index/navigatorbadge.png') no-repeat scroll center top transparent;
+    display: block;
+    padding-top: 90px;
+    margin-top: 30px;
+    float: right;
+    width: 168px;
+  }
+
+/* 
+Index styles & classes
+================================
+Participant (issuer/displayer/earner) common page styles
+*/
+
+  .participant h1 {
+    font: normal 65px/65px "MetaWebPro-Black";
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .participant h2,
+  .participant h3 {
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .participant h2 {
+    font-size: 44px;
+    line-height: 44px;
+    margin: 0;
+  }
+
+  .participant h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .participant li {
+    margin-bottom: 1em;
+  }
+
+  .participant #content > section {
+    border-top: 2px dashed #f7b137;
+    padding: 30px 250px 30px 0;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .participant #content > section:first-child {
+    border-top: none;
+    font-size: 20px;
+    margin-top: -60px;
+    padding-top: 100px;
+  }
+
+/* 
+Participant (issuer/displayer/earner) common page styles
+================================
+Issuer page styles
+*/
+
+  #issuer #content > section:first-child {
+    background: url("../img/participants/boris.png") no-repeat scroll right top transparent;
+    min-height: 200px; /* this + top/bottom padding = img height */
+  }
+
+  #issuer #hands {
+    width: 130px;
+    height: 122px;
+    background: url("../img/participants/boris_hand.png") no-repeat scroll 0 0 transparent;
+    position: absolute;
+    right: 54px;
+    top: 86px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+
+  #issuer #hands:hover {
+    top: 83px;
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+  }
+
+/* 
+Issuer page styles
+================================
+Earner page styles
+*/
+
+  #earner #content > section:first-child {
+    background: url("../img/participants/dorothy.png") no-repeat scroll right 30px transparent;
+    min-height: 285px; /* this + top/bottom padding = img height */
+  }
+
+  #earner #hands {
+    width: 130px;
+    height: 129px;
+    background: url("../img/participants/dorothy_hands.png") no-repeat scroll 0 0 transparent;
+    position: absolute;
+    right: 53px;
+    top: -30px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+
+  #earner #hands:hover {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    transform: rotate(3deg);
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+  }
+
+/* 
+Earner page styles
+================================
+Displayer page styles
+*/
+
+  #displayer #content > section:first-child {
+    background: url("../img/participants/morty.png") no-repeat scroll right top transparent;
+    min-height: 234px; /* this + top/bottom padding = img height */
+    padding-right: 330px;
+  }
+
+  #displayer #hands {
+    width: 113px;
+    height: 119px;
+    background: url("../img/participants/morty_hands.png") no-repeat scroll 0 0 transparent;
+    position: absolute;
+    right: 203px;
+    top: 140px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    -webkit-transform-origin: top center;
+    -moz-transform-origin: top center;
+    transform-origin: top center;
+  }
+
+  #displayer #hands:hover {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    transform: rotate(3deg);
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+  }
+
+/* 
+Displayer page styles
+================================
+About/FAQ/Legal FAQ common page styles
+*/
+
+  #faq h1,
+  #faq h2,
+  #about h1,
+  #about h2 {
+    font: normal 65px/65px "MetaWebPro-Black";
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  #faq h2,
+  #about h2 {
+    font-size: 42px;
+  }
+
+  #faq h3,
+  #about h3 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  #faq #content > section,
+  #about #content > section {
+    border-top: 2px dashed #f7b137;
+    padding: 30px 250px 30px 0;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  #faq header nav,
+  #about header nav {
+    overflow: hidden;
+  }
+
+  #faq header nav ul,
+  #about header nav ul {
+    float: left;
+    background: url("../img/faq/faq-ribbon.png") no-repeat scroll 0 30px transparent;
+  }
+
+  #faq header nav ul li,
+  #about header nav ul li {
+    float: left;
+    text-align: center;
+    margin-right: 45px;
+  }
+
+  #faq header nav ul li a,
+  #about header nav ul li a {
+    display: block;
+    width: 110px;
+    padding: 100px 0 0 0;
+  }
+
+  #faq #content > section:first-child,
+  #about #content > section:first-child {
+    border-top: none;
+  }
+  
+/* 
+About/FAQ/Legal FAQ common page styles
+================================
+FAQ page styles
+*/
+
+  #faq header nav ul li {
+    background: url("../img/faq/faq-icons.png") no-repeat scroll 0 0 transparent;
+  }
+  #faq header nav #systems-nav {
+    background-position: -155px 0;
+  }
+  #faq header nav #obi-nav {
+    background-position: -297px 0;
+  }
+  #faq header nav #dml-nav {
+    background-position: -443px 0;
+  }
+  
+/* 
+FAQ page styles
+================================
+About page styles
+*/
+
+  #about header nav ul li {
+    background: url("../img/about-icons.png") no-repeat scroll 0 0 transparent;
+  }
+  #about header nav #how-it-works-nav {
+    background-position: -155px 0;
+  }
+  #about header nav #obi-nav {
+    background-position: -297px 0;
+  }
+
+/* 
+About page styles
+================================
+*/
+
 
