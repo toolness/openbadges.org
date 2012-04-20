@@ -184,6 +184,21 @@ Universal styles & classes
     margin-bottom: 0;
     text-transform: uppercase;
   }
+  
+  h2 {
+    font: normal 42px "MetaWebPro-Black";
+    margin-bottom: 0;
+    text-transform: uppercase; 
+  }
+  
+  /* h2 as "subheader" */
+  header h2 {
+    font-family: inherit;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: none;
+    margin: 0;
+  }
 
   /* Sandstone buttons */
   .button {
@@ -375,7 +390,7 @@ Base template styles & classes
         color: #9c9c9c;
         font-style: italic;
         font-weight: normal;
-        margin: -1em 0 14px 0;
+        margin: 0 0 14px 0;
       }
 
       .external li {
@@ -513,10 +528,14 @@ Index styles & classes
   }
   
   #what-are-badges .wrapper h1 {
-    padding-top: 35px;
+    font-family: inherit;
+    font-style: italic;
     font-size: 42px;
+    line-height: normal;
     font-weight: normal;
     text-transform: lowercase;
+    padding-top: 35px;
+    margin-bottom: 42px;
   }
 
   #what-are-badges .wrapper h1 em {
@@ -565,8 +584,7 @@ Index styles & classes
   }
 
   #main-nav h2 {
-    font: normal 35px "MetaWebPro-Black";
-    text-transform: uppercase;
+    font-size: 35px;
     margin: 5px 0;
   }
 
@@ -839,16 +857,9 @@ Index styles & classes
 Participant (issuer/displayer/earner) common page styles
 */
 
-  .participant h2,
   .participant h3 {
     font-weight: normal;
     font-style: italic;
-  }
-
-  .participant h2 {
-    font-size: 44px;
-    line-height: 44px;
-    margin: 0;
   }
 
   .participant h3 {
@@ -977,13 +988,6 @@ Displayer page styles
 ================================
 About/FAQ/Legal FAQ common page styles
 */
-
-  #faq h2,
-  #about h2 {
-    font: normal 42px/65px "MetaWebPro-Black";
-    margin-bottom: 0;
-    text-transform: uppercase;
-  }
 
   #faq h3,
   #about h3 {
