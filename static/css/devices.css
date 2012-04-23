@@ -811,10 +811,6 @@ FAQ page styles
 ================================
 Legal FAQ page styles
 */
-
-  #legal_faq header nav ol {
-    list-style: decimal;
-  }
   
   #legal_faq header nav a {
     color: inherit;
