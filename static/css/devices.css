@@ -201,15 +201,21 @@ Universal styles & classes
     text-transform: uppercase; 
   }
   
-  /* h2 as subheader */
-  header h2 {
+  h3 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 24px;
+  } 
+  
+  .subheader {
     font-family: inherit;
     font-weight: normal;
     font-style: italic;
     text-transform: none;
     margin: 0;
   }
-
+  
   /* Sandstone buttons */
   .button {
     float: left; 
@@ -348,6 +354,17 @@ Universal styles & classes
   a.top:before {
     content: "⇧ ";
   }
+  
+  /* visually separated subsections */
+  .chunked > section {
+    border-top: 2px dashed #f7b137;
+    padding: 30px 250px 30px 0;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .chunked > section:first-child {
+    border-top: none;
+  }
 
 /* 
 Universal styles & classes              
@@ -402,6 +419,7 @@ Base template styles & classes
 
       .external h3 {
         font-size: 14px;
+        line-height: normal;
         color: #9c9c9c;
         font-style: italic;
         font-weight: normal;
@@ -630,29 +648,11 @@ Index styles & classes
 Participant (issuer/displayer/earner) common page styles
 */
 
-  .participant h3 {
-    font-weight: normal;
-    font-style: italic;
-  }
-
-  .participant h3 {
-    font-size: 24px;
-    line-height: 24px;
-  }
-
   .participant li {
     margin-bottom: 1em;
   }
 
-  .participant #content > section {
-    border-top: 2px dashed #f7b137;
-    padding: 30px 250px 30px 0;
-    margin-bottom: 20px;
-    position: relative;
-  }
-
   .participant #content > section:first-child {
-    border-top: none;
     font-size: 20px;
     margin-top: -60px;
     padding-top: 100px;
@@ -762,22 +762,6 @@ Displayer page styles
 About/FAQ/Legal FAQ common page styles
 */
 
-  #faq h3,
-  #about h3 {
-    font-weight: normal;
-    font-style: italic;
-    font-size: 24px;
-    line-height: 24px;
-  }
-
-  #faq #content > section,
-  #about #content > section {
-    border-top: 2px dashed #f7b137;
-    padding: 30px 250px 30px 0;
-    margin-bottom: 20px;
-    position: relative;
-  }
-
   #faq header nav,
   #about header nav {
     overflow: hidden;
@@ -802,11 +786,6 @@ About/FAQ/Legal FAQ common page styles
     width: 110px;
     padding: 100px 0 0 0;
   }
-
-  #faq #content > section:first-child,
-  #about #content > section:first-child {
-    border-top: none;
-  }
   
 /* 
 About/FAQ/Legal FAQ common page styles
@@ -829,6 +808,24 @@ FAQ page styles
   
 /* 
 FAQ page styles
+================================
+Legal FAQ page styles
+*/
+
+  #legal_faq header nav ol {
+    list-style: decimal;
+  }
+  
+  #legal_faq header nav a {
+    color: inherit;
+  }
+  
+  #legal_faq header {
+    margin-bottom: 4em;
+  }
+
+/* 
+Legal FAQ page styles
 ================================
 About page styles
 */

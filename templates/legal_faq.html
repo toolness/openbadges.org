@@ -6,120 +6,104 @@
 {% endblock %}
 
 {% block content %}
-  <header>
-    <h1>Legal FAQ</h1>
-    <nav>
-      <ol>
-        <li><a href="#open-badges">What is Open Badges?</a></li>
-        <li><a href="#badge">What is a Badge?</a></li>
-        <li><a href="#what-is-backpack">What is a Badge Backpack?</a></li>
-        <li><a href="#spec">How does the Open Badges specification work?</a></li>
-        <li><a href="#mozilla-backpack">How does the Mozilla Badge Backpack work?</a></li>
-        <li><a href="#adding">How are badges added to the Backpack?</a></li>
-        <li><a href="#display">How may badges in a Backpack be publicly displayed?</a></li>
-        <li><a href="#pi">Does Mozilla Collect or Store Users’ Personal Information In Providing the OBI Services?</a></li>
-      </ol>
-      <h2>FAQs for Issuers:</h2>
+<section id="content" class="chunked">
 
-      <h3>GENERAL FAQs</h3>
-      <ol>    
-        <li><a href="#issuer-responsibility">What are my Responsibilities as an Issuer if I wish to enable earners to send badges to their Mozilla Badge Backpack?</a></li>
-      </ol>
+    <header>
+      <h1>Legal FAQ</h1>
+      <nav>
+        <ol>
+          <li><a href="#open-badges">What is Open Badges?</a></li>
+          <li><a href="#badge">What is a Badge?</a></li>
+          <li><a href="#what-is-backpack">What is a Badge Backpack?</a></li>
+          <li><a href="#spec">How does the Open Badges specification work?</a></li>
+          <li><a href="#mozilla-backpack">How does the Mozilla Badge Backpack work?</a></li>
+          <li><a href="#adding">How are badges added to the Backpack?</a></li>
+          <li><a href="#display">How may badges in a Backpack be publicly displayed?</a></li>
+          <li><a href="#pi">Does Mozilla Collect or Store Users’ Personal Information In Providing the OBI Services?</a></li>
+        </ol>
+        <h2>FAQs for Issuers:</h2>
 
-      <h3>COPPA FAQ</h3>
-      <ol>
-        <li><a href="#coppa">What if I’m an Issuer and my Service is aimed at Children under 13 or I have children under 13 earning Badges?</a></li>
-      </ol>
+        <h3>General:</h3>
+        <ol>    
+          <li><a href="#issuer-responsibility">What are my Responsibilities as an Issuer if I wish to enable earners to send badges to their Mozilla Badge Backpack?</a></li>
+        </ol>
 
-      <h3>FERPA FAQs</h3>
-      <ol>
-        <li><a href="#subject-to-ferpa">What if I operate or Work for an Educational institution that is Subject to the Family Educational Rights and Privacy Act (FERPA)?</a></li>
-        <li><a href="#what-is-ferpa">What is the Family Education Rights and Privacy Act (FERPA) and does it apply to me?</a></li>
-        <li><a href="#ed-record">Under FERPA, what is an Education Record?</a></li>
-        <li><a href="#ferpa-privacy">How does FERPA Protect Students’ Privacy?</a></li>
-        <li><a href="#disclosure">When can PII from an Education Record be Disclosed without Consent?</a></li>
-        <li><a href="#directory-info">What is Directory Information?</a></li>
-        <li><a href="#ferpa-best-practices">What “Best” Practices Should I Consider Implementing When Disclosing Student Data?</a></li>
-      </ol>
-    </nav>
-  </header>
+        <h3>COPPA:</h3>
+        <ol>
+          <li><a href="#coppa">What if I’m an Issuer and my Service is aimed at Children under 13 or I have children under 13 earning Badges?</a></li>
+        </ol>
 
-  <section>
-    <ol>
-      <li id="open-badges">
-        <h1>What is Open Badges?</h1>
-        <p>
-    Open Badges is an initiative by the Mozilla Foundation to help recognize and support lifelong learning through a badge ecosystem. It includes development and deployment of the Open Badge Infrastructure (OBI), the underlying technology that supports badge issuing, collection, and display. The OBI is defined by two aspects: (i) the Open Badge specification, which technically describes an Open Badge standard and (ii) a Badge Backpack, which is a service that provides badge earners a way to collect and manage badges.
-        </p>
-      </li>
-      <li id="badge">
-        <h1>What is a “Badge”?</h1>
-        <p>
-    A “badge” is a digital symbol of recognition that complies with the Open Badge specification. Badges are useful in representing many things such as experiences, achievements, skills, competencies, learning, associations, community involvement, peer interaction, etc. They can function in formal and informal settings and can lead to new learning opportunities, jobs, community interactions, etc. Just like a real-life badge, an Open Badge can represent almost anything, like accomplishments in a class you’ve taken, levels of achievement in an ongoing process, your membership in a club, or your skills as a gamer. The things badges represent do not need to have occurred online: they can represent physical activities such as sports achievements, skills like cooking, etc. 
-        </p>
-        <p>
-    In the Open Badges ecosystem, badges include an image and a set of metadata that explains the badge and the evidence behind it. The result is that each badge carries all the information needed to understand and value the badge with it as it is exchanged or shared across the ecosystem. All badges initially default to private.
-        </p>
-      </li>
-      <li id="what-is-backpack">
-        <h1>What is a Badge Backpack?</h1>
-        <p>
-    A repository for collecting and displaying badges from a variety of sources, the Badge Backpack is a user management interface where the Earner can delete badges, import badges, set privacy controls, create and publish groups of badges, etc. Eventually, many entities may choose to host Badge Backpacks, but to start, Mozilla is hosting a reference Backpack (the “Mozilla Badge Backpack”) that can be used as a model for other Backpack Providers.
-        </p>
-      </li>
-
-      <li id="spec">
-        <h1>How does the Open Badges specification work?</h1>
-        <p>
-    The specification found <a href="https://github.com/mozilla/openbadges/wiki/Assertions">here</a> defines the information, or metadata, that must be included in a badge for it to be considered OBI-compliant. Each Open Badge carries all the information needed to understand that badge as it is transferred throughout the ecosystem. This includes how it was earned, where it was earned, who earned it, if and when it expires, etc. The specification ensures that badges are interoperable with other Open Badges and Badge Backpacks. The Open Badges metadata specification is available under a set of <a href="http://www.mozilla.org/MPL/2.0/">open licenses</a>.
-        </p>
-      </li>
-
-      <li id="mozilla-backpack">
-        <h1>How does the Mozilla Badge Backpack work?</h1>
-        <p>
-    The Mozilla Badge Backpack is a Mozilla hosted service that uses Mozilla’s authentication platform called Mozilla Persona (formerly Browser ID) to tie badges to a specific user. Our specification does not require the use of Persona; however, the reference implementation of the Mozilla Badge Backpack uses it as the primary personal identifier. 
-        </p>
-        <p>
-    The first time an Earner agrees to accept a badge from an OBI-compliant issuer, their Mozilla Badge Backpack is created for them. The Mozilla Badge Backpack is a repository where Earners can collect badges from a variety of issuers. 
-        </p>
-        <p>
-    Earners can log into their Mozilla Badge Backpack at <a href="http://beta.openbadges.org">http://beta.openbadges.org</a> and view and manage their collection, as well as build and publish groups of badges. The Mozilla Badge Backpack is subject to the <a href="http://beta.openbadges.org/privacy.html">Privacy Policy</a> and <a href="http://beta.openbadges.org/tou.html">Terms of Use</a>. 
-        </p>
-      </li>
-
-      <li>
-        <h1 id="adding">How are badges added to the Backpack?</h1>
-        <p>
-    Badges are earned on Issuer sites and by default are marked as private. A badge Earner must initiate the process of adding badges to a Badge Backpack by accepting the badge and pushing it into their Backpack. This pushed badge then has the opportunity to enter the larger Open Badges ecosystem. Earners may also import other badges into their Backpack. Once a badge enters a Badge Backpack, an Earner can take the further step of making that badge publicly findable.
-        </p>
-      </li>
-
-      <li>
-        <h1 id="display">How may badges in a Backpack be publicly displayed?</h1>
-        <p>
-    The badge Earner initiates the display of their badges on any site, including Displayers’ websites. In order to do this, the Earner creates groups of badges within their Badge Backpack and then chooses which site they would like to publicly share this content with. They can create a publicly findable URL that references that specific badge group page or they can push that content to specific Earner-chosen sites.
-        </p>
-      </li>
-
-      <li>
-        <h1 id="pi">Does Mozilla Collect Personal Information in Providing the Mozilla Badge Backpack? </h1>
-        <p>
-    Yes. In order to provide the Mozilla Badge Backpack, we ask Earners to provide a Persona username (usually an email address) so that badges can be linked to a specific user. You can find out about the data we collect for the Mozilla Badge Backpack, and how we handle it, in our Mozilla Badge Backpack <a href="http://beta.openbadges.org/privacy.html">Privacy Policy</a>. You can find out more about our privacy practices regarding Persona <a href="http://www.mozilla.org/en-US/persona/privacy-policy/">here</a>. Other parties, such as Issuers and Backpack Hosts may also collect personal information from you in relation to OBI. You should check the privacy policies of such parties to make sure you are comfortable with their data handling practices.
-        </p>
-      </li>
-    </ol>
-  </section>
-
-  <section>
-    <h1>FAQ For Issuers</h1>
+        <h3>FERPA:</h3>
+        <ol>
+          <li><a href="#subject-to-ferpa">What if I operate or Work for an Educational institution that is Subject to the Family Educational Rights and Privacy Act (FERPA)?</a></li>
+          <li><a href="#what-is-ferpa">What is the Family Education Rights and Privacy Act (FERPA) and does it apply to me?</a></li>
+          <li><a href="#ed-record">Under FERPA, what is an Education Record?</a></li>
+          <li><a href="#ferpa-privacy">How does FERPA Protect Students’ Privacy?</a></li>
+          <li><a href="#disclosure">When can PII from an Education Record be Disclosed without Consent?</a></li>
+          <li><a href="#directory-info">What is Directory Information?</a></li>
+          <li><a href="#ferpa-best-practices">What “Best” Practices Should I Consider Implementing When Disclosing Student Data?</a></li>
+        </ol>
+      </nav>
+    </header>
 
     <section>
-      <h1>GENERAL:</h1>
+	  <h2>Legal FAQ</h2>
+      <h3 id="open-badges">What is Open Badges?</h3>
+      <p>
+  Open Badges is an initiative by the Mozilla Foundation to help recognize and support lifelong learning through a badge ecosystem. It includes development and deployment of the Open Badge Infrastructure (OBI), the underlying technology that supports badge issuing, collection, and display. The OBI is defined by two aspects: (i) the Open Badge specification, which technically describes an Open Badge standard and (ii) a Badge Backpack, which is a service that provides badge earners a way to collect and manage badges.
+      </p>
 
-      <ol>
-        <li id="issuer-responsibility">
-          <h1>What are my Responsibilities as an Issuer if I wish to enable earners to send badges to their Mozilla Badge Backpack?</h1>
+      <h3 id="badge">What is a “Badge”?</h3>
+      <p>
+  A “badge” is a digital symbol of recognition that complies with the Open Badge specification. Badges are useful in representing many things such as experiences, achievements, skills, competencies, learning, associations, community involvement, peer interaction, etc. They can function in formal and informal settings and can lead to new learning opportunities, jobs, community interactions, etc. Just like a real-life badge, an Open Badge can represent almost anything, like accomplishments in a class you’ve taken, levels of achievement in an ongoing process, your membership in a club, or your skills as a gamer. The things badges represent do not need to have occurred online: they can represent physical activities such as sports achievements, skills like cooking, etc. 
+      </p>
+      <p>
+  In the Open Badges ecosystem, badges include an image and a set of metadata that explains the badge and the evidence behind it. The result is that each badge carries all the information needed to understand and value the badge with it as it is exchanged or shared across the ecosystem. All badges initially default to private.
+      </p>
+
+      <h3 id="what-is-backpack">What is a Badge Backpack?</h3>
+      <p>
+  A repository for collecting and displaying badges from a variety of sources, the Badge Backpack is a user management interface where the Earner can delete badges, import badges, set privacy controls, create and publish groups of badges, etc. Eventually, many entities may choose to host Badge Backpacks, but to start, Mozilla is hosting a reference Backpack (the “Mozilla Badge Backpack”) that can be used as a model for other Backpack Providers.
+      </p>
+
+      <h3 id="spec">How does the Open Badges specification work?</h3>
+      <p>
+  The specification found <a href="https://github.com/mozilla/openbadges/wiki/Assertions">here</a> defines the information, or metadata, that must be included in a badge for it to be considered OBI-compliant. Each Open Badge carries all the information needed to understand that badge as it is transferred throughout the ecosystem. This includes how it was earned, where it was earned, who earned it, if and when it expires, etc. The specification ensures that badges are interoperable with other Open Badges and Badge Backpacks. The Open Badges metadata specification is available under a set of <a href="http://www.mozilla.org/MPL/2.0/">open licenses</a>.
+      </p>
+
+      <h3 id="mozilla-backpack">How does the Mozilla Badge Backpack work?</h3>
+      <p>
+  The Mozilla Badge Backpack is a Mozilla hosted service that uses Mozilla’s authentication platform called Mozilla Persona (formerly Browser ID) to tie badges to a specific user. Our specification does not require the use of Persona; however, the reference implementation of the Mozilla Badge Backpack uses it as the primary personal identifier. 
+      </p>
+      <p>
+  The first time an Earner agrees to accept a badge from an OBI-compliant issuer, their Mozilla Badge Backpack is created for them. The Mozilla Badge Backpack is a repository where Earners can collect badges from a variety of issuers. 
+      </p>
+      <p>
+  Earners can log into their Mozilla Badge Backpack at <a href="http://beta.openbadges.org">http://beta.openbadges.org</a> and view and manage their collection, as well as build and publish groups of badges. The Mozilla Badge Backpack is subject to the <a href="http://beta.openbadges.org/privacy.html">Privacy Policy</a> and <a href="http://beta.openbadges.org/tou.html">Terms of Use</a>. 
+      </p>
+
+      <h3 id="adding">How are badges added to the Backpack?</h3>
+      <p>
+  Badges are earned on Issuer sites and by default are marked as private. A badge Earner must initiate the process of adding badges to a Badge Backpack by accepting the badge and pushing it into their Backpack. This pushed badge then has the opportunity to enter the larger Open Badges ecosystem. Earners may also import other badges into their Backpack. Once a badge enters a Badge Backpack, an Earner can take the further step of making that badge publicly findable.
+      </p>
+
+      <h3 id="display">How may badges in a Backpack be publicly displayed?</h3>
+      <p>
+  The badge Earner initiates the display of their badges on any site, including Displayers’ websites. In order to do this, the Earner creates groups of badges within their Badge Backpack and then chooses which site they would like to publicly share this content with. They can create a publicly findable URL that references that specific badge group page or they can push that content to specific Earner-chosen sites.
+      </p>
+
+      <h3 id="pi">Does Mozilla Collect Personal Information in Providing the Mozilla Badge Backpack? </h3>
+      <p>
+  Yes. In order to provide the Mozilla Badge Backpack, we ask Earners to provide a Persona username (usually an email address) so that badges can be linked to a specific user. You can find out about the data we collect for the Mozilla Badge Backpack, and how we handle it, in our Mozilla Badge Backpack <a href="http://beta.openbadges.org/privacy.html">Privacy Policy</a>. You can find out more about our privacy practices regarding Persona <a href="http://www.mozilla.org/en-US/persona/privacy-policy/">here</a>. Other parties, such as Issuers and Backpack Hosts may also collect personal information from you in relation to OBI. You should check the privacy policies of such parties to make sure you are comfortable with their data handling practices.
+      </p>
+    </section>
+ 
+
+    <section>
+	  <a href="#" class="top">Return to top</a>
+      <h2>FAQ For Issuers</h2>
+        <section>
+          <h3 id="issuer-responsibility">What are my Responsibilities as an Issuer if I wish to enable earners to send badges to their Mozilla Badge Backpack?</h3>
           <p>
     As an Issuer, you grant us a non-exclusive, worldwide, royalty free license to use badges (including all the content and code in them) pushed to us by Earners from you in connection with the Mozilla Badge Backpack. 
           </p>
@@ -135,16 +119,15 @@
             <li>Badges may only contain the user’s email address, the issuer’s name, the badge name and specific data about what the badge means such as the badge description and criteria URL, which is a URL pointing to a page hosted by the issuer that details all the criteria required for earning the badge. You will minimize any personal information inserted into a badge’s description by limiting that information to the achievement or accomplishment of skills, attainment of certification or credentials.  See the <a href="https://github.com/mozilla/openbadges/wiki/Assertions">technical specifications</a> about badges for more information. </li>
             <li>If you are an educational institution, the criteria for earning badges may list required grades or minimum grades but the badge itself may not contain any information indicating the actual grade received by that Earner. For more information, see the <a href="#ferpa-faq">FERPA FAQ</a> below.</li>
           </ol>
-        </li>
-      </ol>
-    </section>
+		</section>
+      </section>
 
-    <section id="coppa-faq">
-      <h1>COPPA FAQ:</h1>
+      <section id="coppa-faq">
+        <a href="#" class="top">Return to top</a>
+	    <h2>COPPA:</h2>
 
-      <ol>
-        <li id="coppa">
-          <h1>What if I’m an Issuer and my Service is aimed at Children under 13 or I have children under 13 earning Badges?</h1>
+        <section>
+          <h3 id="coppa">What if I’m an Issuer and my Service is aimed at Children under 13 or I have children under 13 earning Badges?</h3>
           <p>
   The Mozilla Badge Backpack is not available to users under the age of 13. If you have users under 13 who are earning badges, then do not allow those users to push badges to the Mozilla Badge Backpack. 
           </p>
@@ -154,33 +137,26 @@
           <p>
   Please speak with your legal counsel about your particular obligations under the <a href="http://www.coppa.org/">Children’s Online Privacy Protection Act</a>. You can also find out more about COPPA at the <a href="http://www.ftc.gov/privacy/coppafaqs.shtm">FTC COPPA FAQs</a>.
           </p>
-        </li>
-      </ol>
-    </section>
+        </section>
+      </section>
 
-    <section id="ferpa-faq">
-      <h1>FERPA FAQS:</h1>
-      <ol>
-        <li id="subject-to-ferpa">
-          <h1>What if I Operate or Work for an Educational institution that is Subject to the Family Educational Rights and Privacy Act (FERPA)?</h1>
+      <section id="ferpa-faq">
+        <a href="#" class="top">Return to top</a>
+	    <h2>FERPA:</h2>
+        <section>
+          <h3 id="subject-to-ferpa">What if I Operate or Work for an Educational institution that is Subject to the Family Educational Rights and Privacy Act (FERPA)?</h3>
           <p>
   You will have to review your FERPA compliance requirements with your legal counsel. We’ve provided some information to help facilitate some of that discussion in this FAQ. 
           </p>
-        </li>
-        <li id="what-is-ferpa">
-          <h1>What is the Family Education Rights and Privacy Act (FERPA) and does it Apply to me? </h1>
+          <h3 id="what-is-ferpa">What is the Family Education Rights and Privacy Act (FERPA) and does it Apply to me? </h3>
           <p>
   FERPA is a federal law that applies to schools and learning institutions that receive federal funding.  The law protects the privacy of students who are or have been in attendance at these institutions and about whom the institution keeps education records in any format. Additional information about the law itself can be found <a href="http://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html">here</a>.
           </p>
-        </li>
-        <li id="ed-record">
-          <h1>Under FERPA, what is an Education Record?</h1>
+          <h3 id="ed-record">Under FERPA, what is an Education Record?</h3>
           <p>
   Education records are those records maintained by an educational “agency” or “institution” that directly relate to a particular student.
           </p>
-        </li>
-        <li id="ferpa-privacy">
-          <h1>How does FERPA Protect Students’ Privacy?</h1>
+          <h3 id="ferpa-privacy">How does FERPA Protect Students’ Privacy?</h3>
           <p>
   FERPA protects against the improper disclosure of personally identifiable information (PII) about students that are contained within their “Education Record”.  
           </p>
@@ -190,15 +166,11 @@
           <p>
   Additional rights granted by FERPA include a parent’s or legal guardian’s right to access their child’s education records and the right to request that inaccurate or misleading information be amended.  These rights transfer to the student once she turns 18 years old. 
           </p>
-        </li>
-        <li id="disclosure">
-          <h1>When can PII from an Education Record be disclosed Without Consent?</h1>
+          <h3 id="disclosure">When can PII from an Education Record be disclosed Without Consent?</h3>
           <p>
   A school is permitted to disclose PII from a student's education records to third parties without obtaining consent when that information has been appropriately designated “Directory Information” by the school or learning institution.  
           </p>
-        </li>
-        <li id="directory-info">
-          <h1>What is Directory Information? </h1>
+          <h3 id="directory-info">What is Directory Information? </h3>
           <p>
   Generally, Directory Information is information that would not be considered harmful or an invasion of privacy if disclosed.  It can include the student's name, email address, degrees, honors and awards received, phone number, photograph, date and place of birth, major field of study, participation in officially recognized activities and sports, the most recent previous educational agency or institution attended, grade level or year, and enrollment status. Directory information is designated by the school or learning institution and determined at its discretion. 
           </p>
@@ -208,9 +180,7 @@
           <p>
   Even if you designate information in a badge as Directory Information, a parent or student can request that you not share that information, and you should not send that information after a parent or student has made such a request.
           </p>
-        </li>
-        <li id="ferpa-best-practices">
-          <h1>What “Best Practices” Should I Consider Implementing When Disclosing Student Data?</h1>
+          <h3 id="ferpa-best-practices">What “Best Practices” Should I Consider Implementing When Disclosing Student Data?</h3>
           <p>
   It is your responsibility to discuss your FERPA compliance obligations with your legal counsel in connection with OBI.  Regardless of how you classify data, we recommend that students and/or parents or legal guardians have as much transparency and choice as possible when it comes to sharing student data. You may want to ask about some of the following best practices:
           </p>
@@ -221,8 +191,8 @@
             <li>Don’t allow users who are under 13 to send badges to the Mozilla Badge Backpack.</li>
             <li>Only include the minimal amount of data that must be embedded in a badge under the OBI specification. </li>
           </ol>
-        </li>
-      </ol>
+        </section>
+      </section>
     </section>
   </section>
 {% endblock %}
