@@ -1,0 +1,221 @@
+/* Badges 101 lesson & quiz slideshow */
+#badges-101 {
+  display: none; 
+}
+
+  #slides .pagination {
+    margin:26px auto 0;
+    padding: 0;
+    width:100px;
+  }
+
+  #slides .pagination li {
+    float:left;
+    margin:0 1px;
+    list-style:none;
+  }
+
+  #slides .pagination li a {
+    display:block;
+    width:12px;
+    height:0;
+    padding-top:12px;
+    background-image:url(../img/slides/pagination.png);
+    background-position:0 0;
+    float:left;
+    overflow:hidden;
+  }
+
+  #slides .pagination li.current a {
+    background-position:0 -12px;
+  }
+  
+    .slides_container {            
+      width:640px;
+      height:420px;                
+    }
+    .slides_container div {
+      width:640px;
+      height:420px;
+      display:block;
+    }
+
+  #badges-101 .button {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  #badges-101 .next {
+    position: absolute;
+    bottom: 10px; 
+    right: 20px;
+  }
+
+  #badges-101 #intro .next {
+    float: none;
+    position: static;
+    margin: 0 auto;
+  }
+
+  #badges-101 #intro p {
+    margin: 30px 0;
+  }
+
+  #badges-101 #intro .tagline {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  #badges-101 .options {
+    width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  #badges-101 .true {
+    float: left;
+    background-color: #81BC2E; 
+    /* IE10 */ 
+    background-image: -ms-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81BC2E), color-stop(1, #659C28));
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #81BC2E 0%, #659C28 100%);
+    /* Proposed W3C Markup */ 
+    background-image: linear-gradient(top, #81BC2E 0%, #659C28 100%);
+  }
+  #badges-101 .true:after {
+    content: "";
+  }
+
+  #badges-101 .false {
+    float: right;
+    background-color: #D63A2B; 
+    /* IE10 */ 
+    background-image: -ms-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E55927), color-stop(1, #D63A2B));
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #E55927 0%, #D63A2B 100%);
+    /* Proposed W3C Markup */ 
+    background-image: linear-gradient(top, #E55927 0%, #D63A2B 100%);
+  }
+  #badges-101 .false:after {
+    content: "";
+  }
+
+  #badges-101 #intro,
+  #badges-101 #final {
+    text-align: center;
+  }
+
+  #badges-101 #final p {
+    font-style: italic;
+  }
+
+  #badges-101 #final #get-badge .instructions {
+    font-style: normal;
+    margin: 20px 0;
+  }
+
+  #get-badge form input {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 4px;
+  }
+
+  #badges-101 #final #get-badge {
+    padding: 20px 0;
+  }
+
+  #badges-101 .slide {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 30px;
+    position: relative;
+  }
+
+  #badges-101 .lesson p {
+    font-size: 18px;
+    margin: 80px;
+  }
+
+  #badges-101 .quiz {
+    font-size: 18px;
+  }
+
+  #badges-101 #quiz-intro {
+    font-style: italic;
+    width: 100%;
+    text-align: center;
+  }
+
+  #badges-101 .question {
+    text-align: center;
+  }
+
+  #badges-101 .discussion {
+    margin-top: 50px;
+  }
+
+  #badges-101 .discussion .answer {
+    font-style: italic;
+  }
+
+  #badges-101 h1 {
+    font: normal 60px/56px "MetaWebPro-Black";
+    text-transform: uppercase;
+    display: block;
+    margin: 0;
+  }
+
+  #badges-101 #intro h1 {
+    background: url('/img/index/101badge.png') no-repeat scroll center top transparent;
+    padding-top: 145px;
+  }
+
+  #badges-101 #final h1 {
+    margin-top: -20px;
+  }
+
+  #badges-101 #final p {
+    margin: 10px 0 2px 0;
+  }
+
+  #badges-101 #final img {
+    margin-top: -35px;
+  }
+
+  #badges-101 #final nav {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #badges-101 #final .backpack {
+    background: url('/img/index/backpack.png') no-repeat scroll center top transparent;
+    display: block;
+    padding-top: 90px;
+    margin-top: 30px;
+    float: left;
+    width: 168px;
+  }
+
+  #badges-101 #final #navigator {
+    background: url('/img/index/navigatorbadge.png') no-repeat scroll center top transparent;
+    display: block;
+    padding-top: 90px;
+    margin-top: 30px;
+    float: right;
+    width: 168px;
+  }

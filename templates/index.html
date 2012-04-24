@@ -3,6 +3,7 @@
 {% block page_id %}index{% endblock %}
 
 {% block head %}
+  <link rel="stylesheet" type="text/css" href="/css/badges101.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css" media="screen" />
 {% endblock %}
 {% block bodyend %}
@@ -16,20 +17,21 @@
 {% endblock %}
 
 {% block content %}
-      <div id="dml-speech" class="box">Learn more about the <a href="{{ LOCALE_ROOT }}faq.html#dml-competition">DML Badge Competition</a>!</div>
 <section id="content">
   <section id="what-are-badges">
     <div class="wrapper box">
-      <h1>What are <em>Open Badges?</em></h1>
+      <h1><span class="reduce">What are</span> Open Badges?</h1>
       <p>
         Learning today happens everywhere. But it's often difficult to get recognition for skills and achievements that happen online or out of school. Mozilla Open Badges helps solve that problem, making it easy for any organization to issue, manage and display digital badges across the web.
       </p>
-      <p><em>Take the <b>Badges 101<b> quiz—and earn your first badge</em></p>
-      <a href="#badges-101" id="get-started" class="button fancybox">get started</a>
+      <p><em>Take the <b>Badges 101</b> quiz—and earn your first badge</em></p>
+      <a href="#badges-101" id="get-started" class="button right-arrow fancybox">get started</a>
+      <a href="http://beta.openbadges.org" id="backpack" class="right-arrow">visit your Mozilla Badge Backpack</a>
       <div id="hands"></div>
     </div>
+    <div id="dml-speech" class="box">Learn more about the <a href="{{ LOCALE_ROOT }}faq.html#dml-competition">DML Badge Competition</a>!</div>
   </section>
-  <section id="issuer-user-displayer">
+  <section id="main-nav">
     <div class="col box">
       <a href="{{ LOCALE_ROOT }}issuer.html">
         <div class="badge" id="issuer_badge"></div>
@@ -39,7 +41,7 @@
     </div>
     <div class="col box">
       <a href="{{ LOCALE_ROOT }}user.html">
-        <div class="badge" id="user_badge"></div>
+        <div class="badge" id="earner_badge"></div>
         <h2>Earner</h2>
         <p>I want to earn and collect badges</p>
       </a>
@@ -127,21 +129,22 @@
             <p>Congratulations! You’ve just earned the Badges 101 badge!</p>
             <section id="nav-panel">
               <nav>
-                <a id="push-to-backpack" class="backpack">Push badge to your backpack</a>
+                <a id="push-to-backpack" class="backpack">Push this badge to your Mozilla backpack</a>
                 <a id="navigator" href="http://toolness.github.com/hackasaurus-parable/navigator-badge/#">Go earn the Hackasaurus Navigator badge</a>
               </nav>
             </section>
             <section id="get-badge">
-              <p class="instructions">If you'd like to send this badge to your backpack, just fill out the form below.</p>
+              <p class="instructions">If you'd like to send this badge to your Mozilla backpack, just fill out the form below.</p>
               <form>
                 <input type="text" id="email" placeholder="E-mail Address">
                 <input type="submit" value="Send To Backpack »" id="submit">
               </form>
+              <p style="font-size:smaller;">This will push your badge to the Mozilla Badge Backpack which is governed by the Mozilla Badge Backpack Terms of Use and Privacy Policy.</p>
               <img src="/img/ajax-loader.gif" id="throbber" style="display: none">
             </section>
             <section id="after-badge">
               <nav>
-                <a class="backpack" href="http://beta.openbadges.org/">Visit your backpack</a>
+                <a class="backpack" href="http://beta.openbadges.org/">Visit your Mozilla backpack</a>
                 <a id="navigator" href="http://toolness.github.com/hackasaurus-parable/navigator-badge/#">Go earn the Hackasaurus Navigator badge</a>
               </nav>
             </section>
