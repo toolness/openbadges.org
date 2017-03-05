@@ -1,0 +1,61 @@
+/*
+Default template CSS - if you change anything here then updating will be a bit more tricky than you might want
+*/
+/**= Desktop only */
+.columns {
+    margin-left: -10px;
+}
+.col {
+    float: left;
+    padding: 10px;
+    width: 33%;
+}
+.col img {
+    width: 100%;
+}
+.external .col:first-child,
+.partners .col:first-child {
+    padding-left: 0;
+}
+/* Masthead */
+.masthead nav {
+    float: right;
+}
+/**= Overrides from devices.css */
+.busta {
+    max-width: 980px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.partners h2 {
+    line-height: 75px;
+    margin-bottom: 1em;
+}
+.partners ul {
+    margin: 1.1125em 0 1.1125em 20px;
+}
+
+/**= And now time for your styles */
+
+.busta {
+  max-width: 900px;
+}
+
+.masthead nav {
+  float: left;
+  margin-top: 21px;
+}
+
+.partners .disclaimers ul {
+  margin: -0.5em 0 0 0;
+}
+
+/* style for the slides, probably the wrong place to put this */
+#badges-101 .lesson p.detail {
+    margin: 40px;
+}
+
+#badges-101 div.quiz h1 {
+    text-align: center;
+}
+/* end of chris' hamfisted css changes */
