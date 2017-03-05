@@ -1,4 +1,4 @@
 locale
-dist
+#dist
 *.pyc
 settings_local.py
